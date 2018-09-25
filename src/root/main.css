@@ -1,0 +1,60 @@
+div.main,
+div.main .ui.grid {
+    height: inherit;
+    margin: 0px;
+    overflow: hidden;
+    padding: 0px;
+}
+
+#logoContainer {
+    text-align: center;
+}
+
+#logo {
+    width: 88px;
+    height: 88px;
+}
+
+#logolabel {
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.maincontent {
+    margin: 10px;
+    height: 100%;
+}
+
+div.sidebar {
+    background-color: #1b1c1d;
+    height: 100%;
+}
+
+.headerbar {
+    -webkit-app-region: drag;
+    margin: 0px;
+    padding: 0px;
+}
+
+div.headerbar .ui.segment {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+div.headerbar .ui.menu .item {
+    -webkit-app-region: no-drag;
+    padding: 0px;
+    padding-top: 5px;
+}
+
+#pagecontent {
+    height: 100%;
+}
+
+#pagecontent,
+div.main .ui.grid > .row > .column,
+div.main .ui.grid > .row {
+    padding: 0px;
+}

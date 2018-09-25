@@ -1,0 +1,1799 @@
+{
+  "userId": "10355768",
+  "compassCarrierId": 8,
+  "appUrlImg": "https://cdn-web-api-digimonlinkzww.akamaized.net/img/en/",
+  "languageCode": "en",
+  "osType": "2",
+  "resData": {
+    "990110": {
+      "monsterEvolutionRouteM": [
+        {
+          "monsterEvolutionRouteId": "1",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "1",
+          "childhood2MonsterId": "41",
+          "growthMonsterId": "141"
+        },
+        {
+          "monsterEvolutionRouteId": "2",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "2",
+          "childhood2MonsterId": "42",
+          "growthMonsterId": "142"
+        },
+        {
+          "monsterEvolutionRouteId": "3",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "3",
+          "childhood2MonsterId": "43",
+          "growthMonsterId": "143"
+        },
+        {
+          "monsterEvolutionRouteId": "4",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "4",
+          "childhood2MonsterId": "44",
+          "growthMonsterId": "144"
+        },
+        {
+          "monsterEvolutionRouteId": "5",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "5",
+          "childhood2MonsterId": "45",
+          "growthMonsterId": "145"
+        },
+        {
+          "monsterEvolutionRouteId": "6",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "1",
+          "childhood2MonsterId": "41",
+          "growthMonsterId": "211"
+        },
+        {
+          "monsterEvolutionRouteId": "7",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "2",
+          "childhood2MonsterId": "42",
+          "growthMonsterId": "212"
+        },
+        {
+          "monsterEvolutionRouteId": "8",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "3",
+          "childhood2MonsterId": "43",
+          "growthMonsterId": "213"
+        },
+        {
+          "monsterEvolutionRouteId": "9",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "4",
+          "childhood2MonsterId": "44",
+          "growthMonsterId": "214"
+        },
+        {
+          "monsterEvolutionRouteId": "10",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "5",
+          "childhood2MonsterId": "45",
+          "growthMonsterId": "215"
+        },
+        {
+          "monsterEvolutionRouteId": "11",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "1",
+          "childhood2MonsterId": "41",
+          "growthMonsterId": "86"
+        },
+        {
+          "monsterEvolutionRouteId": "12",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "2",
+          "childhood2MonsterId": "42",
+          "growthMonsterId": "87"
+        },
+        {
+          "monsterEvolutionRouteId": "13",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "3",
+          "childhood2MonsterId": "43",
+          "growthMonsterId": "88"
+        },
+        {
+          "monsterEvolutionRouteId": "14",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "4",
+          "childhood2MonsterId": "44",
+          "growthMonsterId": "89"
+        },
+        {
+          "monsterEvolutionRouteId": "15",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "5",
+          "childhood2MonsterId": "45",
+          "growthMonsterId": "90"
+        },
+        {
+          "monsterEvolutionRouteId": "16",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "1",
+          "childhood2MonsterId": "56",
+          "growthMonsterId": "116"
+        },
+        {
+          "monsterEvolutionRouteId": "17",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "2",
+          "childhood2MonsterId": "57",
+          "growthMonsterId": "117"
+        },
+        {
+          "monsterEvolutionRouteId": "18",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "3",
+          "childhood2MonsterId": "58",
+          "growthMonsterId": "118"
+        },
+        {
+          "monsterEvolutionRouteId": "19",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "4",
+          "childhood2MonsterId": "59",
+          "growthMonsterId": "119"
+        },
+        {
+          "monsterEvolutionRouteId": "20",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "5",
+          "childhood2MonsterId": "60",
+          "growthMonsterId": "120"
+        },
+        {
+          "monsterEvolutionRouteId": "21",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "1",
+          "childhood2MonsterId": "56",
+          "growthMonsterId": "96"
+        },
+        {
+          "monsterEvolutionRouteId": "22",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "2",
+          "childhood2MonsterId": "57",
+          "growthMonsterId": "97"
+        },
+        {
+          "monsterEvolutionRouteId": "23",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "3",
+          "childhood2MonsterId": "58",
+          "growthMonsterId": "98"
+        },
+        {
+          "monsterEvolutionRouteId": "24",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "4",
+          "childhood2MonsterId": "59",
+          "growthMonsterId": "99"
+        },
+        {
+          "monsterEvolutionRouteId": "25",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "5",
+          "childhood2MonsterId": "60",
+          "growthMonsterId": "100"
+        },
+        {
+          "monsterEvolutionRouteId": "26",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "1",
+          "childhood2MonsterId": "56",
+          "growthMonsterId": "261"
+        },
+        {
+          "monsterEvolutionRouteId": "27",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "2",
+          "childhood2MonsterId": "57",
+          "growthMonsterId": "262"
+        },
+        {
+          "monsterEvolutionRouteId": "28",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "3",
+          "childhood2MonsterId": "58",
+          "growthMonsterId": "263"
+        },
+        {
+          "monsterEvolutionRouteId": "29",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "4",
+          "childhood2MonsterId": "59",
+          "growthMonsterId": "264"
+        },
+        {
+          "monsterEvolutionRouteId": "30",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "5",
+          "childhood2MonsterId": "60",
+          "growthMonsterId": "265"
+        },
+        {
+          "monsterEvolutionRouteId": "31",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6",
+          "childhood2MonsterId": "71",
+          "growthMonsterId": "176"
+        },
+        {
+          "monsterEvolutionRouteId": "32",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "7",
+          "childhood2MonsterId": "72",
+          "growthMonsterId": "177"
+        },
+        {
+          "monsterEvolutionRouteId": "33",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "8",
+          "childhood2MonsterId": "73",
+          "growthMonsterId": "178"
+        },
+        {
+          "monsterEvolutionRouteId": "34",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "9",
+          "childhood2MonsterId": "74",
+          "growthMonsterId": "179"
+        },
+        {
+          "monsterEvolutionRouteId": "35",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "10",
+          "childhood2MonsterId": "75",
+          "growthMonsterId": "180"
+        },
+        {
+          "monsterEvolutionRouteId": "36",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6",
+          "childhood2MonsterId": "71",
+          "growthMonsterId": "191"
+        },
+        {
+          "monsterEvolutionRouteId": "37",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "7",
+          "childhood2MonsterId": "72",
+          "growthMonsterId": "192"
+        },
+        {
+          "monsterEvolutionRouteId": "38",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "8",
+          "childhood2MonsterId": "73",
+          "growthMonsterId": "193"
+        },
+        {
+          "monsterEvolutionRouteId": "39",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "9",
+          "childhood2MonsterId": "74",
+          "growthMonsterId": "194"
+        },
+        {
+          "monsterEvolutionRouteId": "40",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "10",
+          "childhood2MonsterId": "75",
+          "growthMonsterId": "195"
+        },
+        {
+          "monsterEvolutionRouteId": "41",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6",
+          "childhood2MonsterId": "71",
+          "growthMonsterId": "146"
+        },
+        {
+          "monsterEvolutionRouteId": "42",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "7",
+          "childhood2MonsterId": "72",
+          "growthMonsterId": "147"
+        },
+        {
+          "monsterEvolutionRouteId": "43",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "8",
+          "childhood2MonsterId": "73",
+          "growthMonsterId": "148"
+        },
+        {
+          "monsterEvolutionRouteId": "44",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "9",
+          "childhood2MonsterId": "74",
+          "growthMonsterId": "149"
+        },
+        {
+          "monsterEvolutionRouteId": "45",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "10",
+          "childhood2MonsterId": "75",
+          "growthMonsterId": "150"
+        },
+        {
+          "monsterEvolutionRouteId": "46",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6",
+          "childhood2MonsterId": "61",
+          "growthMonsterId": "101"
+        },
+        {
+          "monsterEvolutionRouteId": "47",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "7",
+          "childhood2MonsterId": "62",
+          "growthMonsterId": "102"
+        },
+        {
+          "monsterEvolutionRouteId": "48",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "8",
+          "childhood2MonsterId": "63",
+          "growthMonsterId": "103"
+        },
+        {
+          "monsterEvolutionRouteId": "49",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "9",
+          "childhood2MonsterId": "64",
+          "growthMonsterId": "104"
+        },
+        {
+          "monsterEvolutionRouteId": "50",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "10",
+          "childhood2MonsterId": "65",
+          "growthMonsterId": "105"
+        },
+        {
+          "monsterEvolutionRouteId": "51",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6",
+          "childhood2MonsterId": "61",
+          "growthMonsterId": "216"
+        },
+        {
+          "monsterEvolutionRouteId": "52",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "7",
+          "childhood2MonsterId": "62",
+          "growthMonsterId": "217"
+        },
+        {
+          "monsterEvolutionRouteId": "53",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "8",
+          "childhood2MonsterId": "63",
+          "growthMonsterId": "218"
+        },
+        {
+          "monsterEvolutionRouteId": "54",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "9",
+          "childhood2MonsterId": "64",
+          "growthMonsterId": "219"
+        },
+        {
+          "monsterEvolutionRouteId": "55",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "10",
+          "childhood2MonsterId": "65",
+          "growthMonsterId": "220"
+        },
+        {
+          "monsterEvolutionRouteId": "56",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6",
+          "childhood2MonsterId": "61",
+          "growthMonsterId": "266"
+        },
+        {
+          "monsterEvolutionRouteId": "57",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "7",
+          "childhood2MonsterId": "62",
+          "growthMonsterId": "267"
+        },
+        {
+          "monsterEvolutionRouteId": "58",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "8",
+          "childhood2MonsterId": "63",
+          "growthMonsterId": "268"
+        },
+        {
+          "monsterEvolutionRouteId": "59",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "9",
+          "childhood2MonsterId": "64",
+          "growthMonsterId": "269"
+        },
+        {
+          "monsterEvolutionRouteId": "60",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "10",
+          "childhood2MonsterId": "65",
+          "growthMonsterId": "270"
+        },
+        {
+          "monsterEvolutionRouteId": "61",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6",
+          "childhood2MonsterId": "31",
+          "growthMonsterId": "206"
+        },
+        {
+          "monsterEvolutionRouteId": "62",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "7",
+          "childhood2MonsterId": "32",
+          "growthMonsterId": "207"
+        },
+        {
+          "monsterEvolutionRouteId": "63",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "8",
+          "childhood2MonsterId": "33",
+          "growthMonsterId": "208"
+        },
+        {
+          "monsterEvolutionRouteId": "64",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "9",
+          "childhood2MonsterId": "34",
+          "growthMonsterId": "209"
+        },
+        {
+          "monsterEvolutionRouteId": "65",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "10",
+          "childhood2MonsterId": "35",
+          "growthMonsterId": "210"
+        },
+        {
+          "monsterEvolutionRouteId": "66",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6",
+          "childhood2MonsterId": "31",
+          "growthMonsterId": "246"
+        },
+        {
+          "monsterEvolutionRouteId": "67",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "7",
+          "childhood2MonsterId": "32",
+          "growthMonsterId": "247"
+        },
+        {
+          "monsterEvolutionRouteId": "68",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "8",
+          "childhood2MonsterId": "33",
+          "growthMonsterId": "248"
+        },
+        {
+          "monsterEvolutionRouteId": "69",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "9",
+          "childhood2MonsterId": "34",
+          "growthMonsterId": "249"
+        },
+        {
+          "monsterEvolutionRouteId": "70",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "10",
+          "childhood2MonsterId": "35",
+          "growthMonsterId": "250"
+        },
+        {
+          "monsterEvolutionRouteId": "71",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6",
+          "childhood2MonsterId": "31",
+          "growthMonsterId": "256"
+        },
+        {
+          "monsterEvolutionRouteId": "72",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "7",
+          "childhood2MonsterId": "32",
+          "growthMonsterId": "257"
+        },
+        {
+          "monsterEvolutionRouteId": "73",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "8",
+          "childhood2MonsterId": "33",
+          "growthMonsterId": "258"
+        },
+        {
+          "monsterEvolutionRouteId": "74",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "9",
+          "childhood2MonsterId": "34",
+          "growthMonsterId": "259"
+        },
+        {
+          "monsterEvolutionRouteId": "75",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "10",
+          "childhood2MonsterId": "35",
+          "growthMonsterId": "260"
+        },
+        {
+          "monsterEvolutionRouteId": "76",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "11",
+          "childhood2MonsterId": "36",
+          "growthMonsterId": "121"
+        },
+        {
+          "monsterEvolutionRouteId": "77",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "12",
+          "childhood2MonsterId": "37",
+          "growthMonsterId": "122"
+        },
+        {
+          "monsterEvolutionRouteId": "78",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "13",
+          "childhood2MonsterId": "38",
+          "growthMonsterId": "123"
+        },
+        {
+          "monsterEvolutionRouteId": "79",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "14",
+          "childhood2MonsterId": "39",
+          "growthMonsterId": "124"
+        },
+        {
+          "monsterEvolutionRouteId": "80",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "15",
+          "childhood2MonsterId": "40",
+          "growthMonsterId": "125"
+        },
+        {
+          "monsterEvolutionRouteId": "81",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "11",
+          "childhood2MonsterId": "36",
+          "growthMonsterId": "151"
+        },
+        {
+          "monsterEvolutionRouteId": "82",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "12",
+          "childhood2MonsterId": "37",
+          "growthMonsterId": "152"
+        },
+        {
+          "monsterEvolutionRouteId": "83",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "13",
+          "childhood2MonsterId": "38",
+          "growthMonsterId": "153"
+        },
+        {
+          "monsterEvolutionRouteId": "84",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "14",
+          "childhood2MonsterId": "39",
+          "growthMonsterId": "154"
+        },
+        {
+          "monsterEvolutionRouteId": "85",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "15",
+          "childhood2MonsterId": "40",
+          "growthMonsterId": "155"
+        },
+        {
+          "monsterEvolutionRouteId": "86",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "11",
+          "childhood2MonsterId": "36",
+          "growthMonsterId": "226"
+        },
+        {
+          "monsterEvolutionRouteId": "87",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "12",
+          "childhood2MonsterId": "37",
+          "growthMonsterId": "227"
+        },
+        {
+          "monsterEvolutionRouteId": "88",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "13",
+          "childhood2MonsterId": "38",
+          "growthMonsterId": "228"
+        },
+        {
+          "monsterEvolutionRouteId": "89",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "14",
+          "childhood2MonsterId": "39",
+          "growthMonsterId": "229"
+        },
+        {
+          "monsterEvolutionRouteId": "90",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "15",
+          "childhood2MonsterId": "40",
+          "growthMonsterId": "230"
+        },
+        {
+          "monsterEvolutionRouteId": "91",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "11",
+          "childhood2MonsterId": "51",
+          "growthMonsterId": "91"
+        },
+        {
+          "monsterEvolutionRouteId": "92",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "12",
+          "childhood2MonsterId": "52",
+          "growthMonsterId": "92"
+        },
+        {
+          "monsterEvolutionRouteId": "93",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "13",
+          "childhood2MonsterId": "53",
+          "growthMonsterId": "93"
+        },
+        {
+          "monsterEvolutionRouteId": "94",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "14",
+          "childhood2MonsterId": "54",
+          "growthMonsterId": "94"
+        },
+        {
+          "monsterEvolutionRouteId": "95",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "15",
+          "childhood2MonsterId": "55",
+          "growthMonsterId": "95"
+        },
+        {
+          "monsterEvolutionRouteId": "96",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "11",
+          "childhood2MonsterId": "51",
+          "growthMonsterId": "171"
+        },
+        {
+          "monsterEvolutionRouteId": "97",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "12",
+          "childhood2MonsterId": "52",
+          "growthMonsterId": "172"
+        },
+        {
+          "monsterEvolutionRouteId": "98",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "13",
+          "childhood2MonsterId": "53",
+          "growthMonsterId": "173"
+        },
+        {
+          "monsterEvolutionRouteId": "99",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "14",
+          "childhood2MonsterId": "54",
+          "growthMonsterId": "174"
+        },
+        {
+          "monsterEvolutionRouteId": "100",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "15",
+          "childhood2MonsterId": "55",
+          "growthMonsterId": "175"
+        },
+        {
+          "monsterEvolutionRouteId": "101",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "11",
+          "childhood2MonsterId": "51",
+          "growthMonsterId": "231"
+        },
+        {
+          "monsterEvolutionRouteId": "102",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "12",
+          "childhood2MonsterId": "52",
+          "growthMonsterId": "232"
+        },
+        {
+          "monsterEvolutionRouteId": "103",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "13",
+          "childhood2MonsterId": "53",
+          "growthMonsterId": "233"
+        },
+        {
+          "monsterEvolutionRouteId": "104",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "14",
+          "childhood2MonsterId": "54",
+          "growthMonsterId": "234"
+        },
+        {
+          "monsterEvolutionRouteId": "105",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "15",
+          "childhood2MonsterId": "55",
+          "growthMonsterId": "235"
+        },
+        {
+          "monsterEvolutionRouteId": "106",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "16",
+          "childhood2MonsterId": "76",
+          "growthMonsterId": "111"
+        },
+        {
+          "monsterEvolutionRouteId": "107",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "17",
+          "childhood2MonsterId": "77",
+          "growthMonsterId": "112"
+        },
+        {
+          "monsterEvolutionRouteId": "108",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "18",
+          "childhood2MonsterId": "78",
+          "growthMonsterId": "113"
+        },
+        {
+          "monsterEvolutionRouteId": "109",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "19",
+          "childhood2MonsterId": "79",
+          "growthMonsterId": "114"
+        },
+        {
+          "monsterEvolutionRouteId": "110",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "20",
+          "childhood2MonsterId": "80",
+          "growthMonsterId": "115"
+        },
+        {
+          "monsterEvolutionRouteId": "111",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "16",
+          "childhood2MonsterId": "76",
+          "growthMonsterId": "186"
+        },
+        {
+          "monsterEvolutionRouteId": "112",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "17",
+          "childhood2MonsterId": "77",
+          "growthMonsterId": "187"
+        },
+        {
+          "monsterEvolutionRouteId": "113",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "18",
+          "childhood2MonsterId": "78",
+          "growthMonsterId": "188"
+        },
+        {
+          "monsterEvolutionRouteId": "114",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "19",
+          "childhood2MonsterId": "79",
+          "growthMonsterId": "189"
+        },
+        {
+          "monsterEvolutionRouteId": "115",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "20",
+          "childhood2MonsterId": "80",
+          "growthMonsterId": "190"
+        },
+        {
+          "monsterEvolutionRouteId": "116",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "16",
+          "childhood2MonsterId": "76",
+          "growthMonsterId": "136"
+        },
+        {
+          "monsterEvolutionRouteId": "117",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "17",
+          "childhood2MonsterId": "77",
+          "growthMonsterId": "137"
+        },
+        {
+          "monsterEvolutionRouteId": "118",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "18",
+          "childhood2MonsterId": "78",
+          "growthMonsterId": "138"
+        },
+        {
+          "monsterEvolutionRouteId": "119",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "19",
+          "childhood2MonsterId": "79",
+          "growthMonsterId": "139"
+        },
+        {
+          "monsterEvolutionRouteId": "120",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "20",
+          "childhood2MonsterId": "80",
+          "growthMonsterId": "140"
+        },
+        {
+          "monsterEvolutionRouteId": "121",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "16",
+          "childhood2MonsterId": "26",
+          "growthMonsterId": "81"
+        },
+        {
+          "monsterEvolutionRouteId": "122",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "17",
+          "childhood2MonsterId": "27",
+          "growthMonsterId": "82"
+        },
+        {
+          "monsterEvolutionRouteId": "123",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "18",
+          "childhood2MonsterId": "28",
+          "growthMonsterId": "83"
+        },
+        {
+          "monsterEvolutionRouteId": "124",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "19",
+          "childhood2MonsterId": "29",
+          "growthMonsterId": "84"
+        },
+        {
+          "monsterEvolutionRouteId": "125",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "20",
+          "childhood2MonsterId": "30",
+          "growthMonsterId": "85"
+        },
+        {
+          "monsterEvolutionRouteId": "126",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "16",
+          "childhood2MonsterId": "26",
+          "growthMonsterId": "181"
+        },
+        {
+          "monsterEvolutionRouteId": "127",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "17",
+          "childhood2MonsterId": "27",
+          "growthMonsterId": "182"
+        },
+        {
+          "monsterEvolutionRouteId": "128",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "18",
+          "childhood2MonsterId": "28",
+          "growthMonsterId": "183"
+        },
+        {
+          "monsterEvolutionRouteId": "129",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "19",
+          "childhood2MonsterId": "29",
+          "growthMonsterId": "184"
+        },
+        {
+          "monsterEvolutionRouteId": "130",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "20",
+          "childhood2MonsterId": "30",
+          "growthMonsterId": "185"
+        },
+        {
+          "monsterEvolutionRouteId": "131",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "16",
+          "childhood2MonsterId": "26",
+          "growthMonsterId": "131"
+        },
+        {
+          "monsterEvolutionRouteId": "132",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "17",
+          "childhood2MonsterId": "27",
+          "growthMonsterId": "132"
+        },
+        {
+          "monsterEvolutionRouteId": "133",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "18",
+          "childhood2MonsterId": "28",
+          "growthMonsterId": "133"
+        },
+        {
+          "monsterEvolutionRouteId": "134",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "19",
+          "childhood2MonsterId": "29",
+          "growthMonsterId": "134"
+        },
+        {
+          "monsterEvolutionRouteId": "135",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "20",
+          "childhood2MonsterId": "30",
+          "growthMonsterId": "135"
+        },
+        {
+          "monsterEvolutionRouteId": "136",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "16",
+          "childhood2MonsterId": "26",
+          "growthMonsterId": "201"
+        },
+        {
+          "monsterEvolutionRouteId": "137",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "17",
+          "childhood2MonsterId": "27",
+          "growthMonsterId": "202"
+        },
+        {
+          "monsterEvolutionRouteId": "138",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "18",
+          "childhood2MonsterId": "28",
+          "growthMonsterId": "203"
+        },
+        {
+          "monsterEvolutionRouteId": "139",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "19",
+          "childhood2MonsterId": "29",
+          "growthMonsterId": "204"
+        },
+        {
+          "monsterEvolutionRouteId": "140",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "20",
+          "childhood2MonsterId": "30",
+          "growthMonsterId": "205"
+        },
+        {
+          "monsterEvolutionRouteId": "141",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "21",
+          "childhood2MonsterId": "46",
+          "growthMonsterId": "196"
+        },
+        {
+          "monsterEvolutionRouteId": "142",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "22",
+          "childhood2MonsterId": "47",
+          "growthMonsterId": "197"
+        },
+        {
+          "monsterEvolutionRouteId": "143",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "23",
+          "childhood2MonsterId": "48",
+          "growthMonsterId": "198"
+        },
+        {
+          "monsterEvolutionRouteId": "144",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "24",
+          "childhood2MonsterId": "49",
+          "growthMonsterId": "199"
+        },
+        {
+          "monsterEvolutionRouteId": "145",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "25",
+          "childhood2MonsterId": "50",
+          "growthMonsterId": "200"
+        },
+        {
+          "monsterEvolutionRouteId": "146",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "21",
+          "childhood2MonsterId": "46",
+          "growthMonsterId": "241"
+        },
+        {
+          "monsterEvolutionRouteId": "147",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "22",
+          "childhood2MonsterId": "47",
+          "growthMonsterId": "242"
+        },
+        {
+          "monsterEvolutionRouteId": "148",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "23",
+          "childhood2MonsterId": "48",
+          "growthMonsterId": "243"
+        },
+        {
+          "monsterEvolutionRouteId": "149",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "24",
+          "childhood2MonsterId": "49",
+          "growthMonsterId": "244"
+        },
+        {
+          "monsterEvolutionRouteId": "150",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "25",
+          "childhood2MonsterId": "50",
+          "growthMonsterId": "245"
+        },
+        {
+          "monsterEvolutionRouteId": "151",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "21",
+          "childhood2MonsterId": "46",
+          "growthMonsterId": "221"
+        },
+        {
+          "monsterEvolutionRouteId": "152",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "22",
+          "childhood2MonsterId": "47",
+          "growthMonsterId": "222"
+        },
+        {
+          "monsterEvolutionRouteId": "153",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "23",
+          "childhood2MonsterId": "48",
+          "growthMonsterId": "223"
+        },
+        {
+          "monsterEvolutionRouteId": "154",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "24",
+          "childhood2MonsterId": "49",
+          "growthMonsterId": "224"
+        },
+        {
+          "monsterEvolutionRouteId": "155",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "25",
+          "childhood2MonsterId": "50",
+          "growthMonsterId": "225"
+        },
+        {
+          "monsterEvolutionRouteId": "156",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "21",
+          "childhood2MonsterId": "46",
+          "growthMonsterId": "251"
+        },
+        {
+          "monsterEvolutionRouteId": "157",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "22",
+          "childhood2MonsterId": "47",
+          "growthMonsterId": "252"
+        },
+        {
+          "monsterEvolutionRouteId": "158",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "23",
+          "childhood2MonsterId": "48",
+          "growthMonsterId": "253"
+        },
+        {
+          "monsterEvolutionRouteId": "159",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "24",
+          "childhood2MonsterId": "49",
+          "growthMonsterId": "254"
+        },
+        {
+          "monsterEvolutionRouteId": "160",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "25",
+          "childhood2MonsterId": "50",
+          "growthMonsterId": "255"
+        },
+        {
+          "monsterEvolutionRouteId": "161",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "21",
+          "childhood2MonsterId": "66",
+          "growthMonsterId": "156"
+        },
+        {
+          "monsterEvolutionRouteId": "162",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "22",
+          "childhood2MonsterId": "67",
+          "growthMonsterId": "157"
+        },
+        {
+          "monsterEvolutionRouteId": "163",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "23",
+          "childhood2MonsterId": "68",
+          "growthMonsterId": "158"
+        },
+        {
+          "monsterEvolutionRouteId": "164",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "24",
+          "childhood2MonsterId": "69",
+          "growthMonsterId": "159"
+        },
+        {
+          "monsterEvolutionRouteId": "165",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "25",
+          "childhood2MonsterId": "70",
+          "growthMonsterId": "160"
+        },
+        {
+          "monsterEvolutionRouteId": "166",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "21",
+          "childhood2MonsterId": "66",
+          "growthMonsterId": "106"
+        },
+        {
+          "monsterEvolutionRouteId": "167",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "22",
+          "childhood2MonsterId": "67",
+          "growthMonsterId": "107"
+        },
+        {
+          "monsterEvolutionRouteId": "168",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "23",
+          "childhood2MonsterId": "68",
+          "growthMonsterId": "108"
+        },
+        {
+          "monsterEvolutionRouteId": "169",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "24",
+          "childhood2MonsterId": "69",
+          "growthMonsterId": "109"
+        },
+        {
+          "monsterEvolutionRouteId": "170",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "25",
+          "childhood2MonsterId": "70",
+          "growthMonsterId": "110"
+        },
+        {
+          "monsterEvolutionRouteId": "171",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "21",
+          "childhood2MonsterId": "66",
+          "growthMonsterId": "161"
+        },
+        {
+          "monsterEvolutionRouteId": "172",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "22",
+          "childhood2MonsterId": "67",
+          "growthMonsterId": "162"
+        },
+        {
+          "monsterEvolutionRouteId": "173",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "23",
+          "childhood2MonsterId": "68",
+          "growthMonsterId": "163"
+        },
+        {
+          "monsterEvolutionRouteId": "174",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "24",
+          "childhood2MonsterId": "69",
+          "growthMonsterId": "164"
+        },
+        {
+          "monsterEvolutionRouteId": "175",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "25",
+          "childhood2MonsterId": "70",
+          "growthMonsterId": "165"
+        },
+        {
+          "monsterEvolutionRouteId": "176",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "21",
+          "childhood2MonsterId": "66",
+          "growthMonsterId": "236"
+        },
+        {
+          "monsterEvolutionRouteId": "177",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "22",
+          "childhood2MonsterId": "67",
+          "growthMonsterId": "237"
+        },
+        {
+          "monsterEvolutionRouteId": "178",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "23",
+          "childhood2MonsterId": "68",
+          "growthMonsterId": "238"
+        },
+        {
+          "monsterEvolutionRouteId": "179",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "24",
+          "childhood2MonsterId": "69",
+          "growthMonsterId": "239"
+        },
+        {
+          "monsterEvolutionRouteId": "180",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "25",
+          "childhood2MonsterId": "70",
+          "growthMonsterId": "240"
+        },
+        {
+          "monsterEvolutionRouteId": "181",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "11",
+          "childhood2MonsterId": "36",
+          "growthMonsterId": "126"
+        },
+        {
+          "monsterEvolutionRouteId": "182",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "12",
+          "childhood2MonsterId": "37",
+          "growthMonsterId": "127"
+        },
+        {
+          "monsterEvolutionRouteId": "183",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "13",
+          "childhood2MonsterId": "38",
+          "growthMonsterId": "128"
+        },
+        {
+          "monsterEvolutionRouteId": "184",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "14",
+          "childhood2MonsterId": "39",
+          "growthMonsterId": "129"
+        },
+        {
+          "monsterEvolutionRouteId": "185",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "15",
+          "childhood2MonsterId": "40",
+          "growthMonsterId": "130"
+        },
+        {
+          "monsterEvolutionRouteId": "186",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6",
+          "childhood2MonsterId": "71",
+          "growthMonsterId": "166"
+        },
+        {
+          "monsterEvolutionRouteId": "187",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "7",
+          "childhood2MonsterId": "72",
+          "growthMonsterId": "167"
+        },
+        {
+          "monsterEvolutionRouteId": "188",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "8",
+          "childhood2MonsterId": "73",
+          "growthMonsterId": "168"
+        },
+        {
+          "monsterEvolutionRouteId": "189",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "9",
+          "childhood2MonsterId": "74",
+          "growthMonsterId": "169"
+        },
+        {
+          "monsterEvolutionRouteId": "190",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "10",
+          "childhood2MonsterId": "75",
+          "growthMonsterId": "170"
+        },
+        {
+          "monsterEvolutionRouteId": "191",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "1526",
+          "childhood2MonsterId": "1531",
+          "growthMonsterId": "1441"
+        },
+        {
+          "monsterEvolutionRouteId": "192",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "1527",
+          "childhood2MonsterId": "1532",
+          "growthMonsterId": "1442"
+        },
+        {
+          "monsterEvolutionRouteId": "193",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "1528",
+          "childhood2MonsterId": "1533",
+          "growthMonsterId": "1443"
+        },
+        {
+          "monsterEvolutionRouteId": "194",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "1529",
+          "childhood2MonsterId": "1534",
+          "growthMonsterId": "1444"
+        },
+        {
+          "monsterEvolutionRouteId": "195",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "1530",
+          "childhood2MonsterId": "1535",
+          "growthMonsterId": "1445"
+        },
+        {
+          "monsterEvolutionRouteId": "201",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "16",
+          "childhood2MonsterId": "26",
+          "growthMonsterId": "1561"
+        },
+        {
+          "monsterEvolutionRouteId": "202",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "17",
+          "childhood2MonsterId": "27",
+          "growthMonsterId": "1562"
+        },
+        {
+          "monsterEvolutionRouteId": "203",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "18",
+          "childhood2MonsterId": "28",
+          "growthMonsterId": "1563"
+        },
+        {
+          "monsterEvolutionRouteId": "204",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "19",
+          "childhood2MonsterId": "29",
+          "growthMonsterId": "1564"
+        },
+        {
+          "monsterEvolutionRouteId": "205",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "20",
+          "childhood2MonsterId": "30",
+          "growthMonsterId": "1565"
+        },
+        {
+          "monsterEvolutionRouteId": "206",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "11",
+          "childhood2MonsterId": "36",
+          "growthMonsterId": "1606"
+        },
+        {
+          "monsterEvolutionRouteId": "207",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "12",
+          "childhood2MonsterId": "37",
+          "growthMonsterId": "1607"
+        },
+        {
+          "monsterEvolutionRouteId": "208",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "13",
+          "childhood2MonsterId": "38",
+          "growthMonsterId": "1608"
+        },
+        {
+          "monsterEvolutionRouteId": "209",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "14",
+          "childhood2MonsterId": "39",
+          "growthMonsterId": "1609"
+        },
+        {
+          "monsterEvolutionRouteId": "210",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "15",
+          "childhood2MonsterId": "40",
+          "growthMonsterId": "1610"
+        },
+        {
+          "monsterEvolutionRouteId": "1001",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6001",
+          "childhood2MonsterId": "6006",
+          "growthMonsterId": "6011"
+        },
+        {
+          "monsterEvolutionRouteId": "1002",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6002",
+          "childhood2MonsterId": "6007",
+          "growthMonsterId": "6012"
+        },
+        {
+          "monsterEvolutionRouteId": "1003",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6003",
+          "childhood2MonsterId": "6008",
+          "growthMonsterId": "6013"
+        },
+        {
+          "monsterEvolutionRouteId": "1004",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6004",
+          "childhood2MonsterId": "6009",
+          "growthMonsterId": "6014"
+        },
+        {
+          "monsterEvolutionRouteId": "1005",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6005",
+          "childhood2MonsterId": "6010",
+          "growthMonsterId": "6015"
+        },
+        {
+          "monsterEvolutionRouteId": "1006",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6031",
+          "childhood2MonsterId": "6036",
+          "growthMonsterId": "6041"
+        },
+        {
+          "monsterEvolutionRouteId": "1007",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6032",
+          "childhood2MonsterId": "6037",
+          "growthMonsterId": "6042"
+        },
+        {
+          "monsterEvolutionRouteId": "1008",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6033",
+          "childhood2MonsterId": "6038",
+          "growthMonsterId": "6043"
+        },
+        {
+          "monsterEvolutionRouteId": "1009",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6034",
+          "childhood2MonsterId": "6039",
+          "growthMonsterId": "6044"
+        },
+        {
+          "monsterEvolutionRouteId": "1010",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6035",
+          "childhood2MonsterId": "6040",
+          "growthMonsterId": "6045"
+        },
+        {
+          "monsterEvolutionRouteId": "1011",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6061",
+          "childhood2MonsterId": "6066",
+          "growthMonsterId": "6071"
+        },
+        {
+          "monsterEvolutionRouteId": "1012",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6062",
+          "childhood2MonsterId": "6067",
+          "growthMonsterId": "6072"
+        },
+        {
+          "monsterEvolutionRouteId": "1013",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6063",
+          "childhood2MonsterId": "6068",
+          "growthMonsterId": "6073"
+        },
+        {
+          "monsterEvolutionRouteId": "1014",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6064",
+          "childhood2MonsterId": "6069",
+          "growthMonsterId": "6074"
+        },
+        {
+          "monsterEvolutionRouteId": "1015",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6065",
+          "childhood2MonsterId": "6070",
+          "growthMonsterId": "6075"
+        },
+        {
+          "monsterEvolutionRouteId": "1016",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6091",
+          "childhood2MonsterId": "6096",
+          "growthMonsterId": "6101"
+        },
+        {
+          "monsterEvolutionRouteId": "1017",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6092",
+          "childhood2MonsterId": "6097",
+          "growthMonsterId": "6102"
+        },
+        {
+          "monsterEvolutionRouteId": "1018",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6093",
+          "childhood2MonsterId": "6098",
+          "growthMonsterId": "6103"
+        },
+        {
+          "monsterEvolutionRouteId": "1019",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6094",
+          "childhood2MonsterId": "6099",
+          "growthMonsterId": "6104"
+        },
+        {
+          "monsterEvolutionRouteId": "1020",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6095",
+          "childhood2MonsterId": "6100",
+          "growthMonsterId": "6105"
+        },
+        {
+          "monsterEvolutionRouteId": "1021",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "6121",
+          "childhood2MonsterId": "6126",
+          "growthMonsterId": "6131"
+        },
+        {
+          "monsterEvolutionRouteId": "1022",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "6122",
+          "childhood2MonsterId": "6127",
+          "growthMonsterId": "6132"
+        },
+        {
+          "monsterEvolutionRouteId": "1023",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "6123",
+          "childhood2MonsterId": "6128",
+          "growthMonsterId": "6133"
+        },
+        {
+          "monsterEvolutionRouteId": "1024",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "6124",
+          "childhood2MonsterId": "6129",
+          "growthMonsterId": "6134"
+        },
+        {
+          "monsterEvolutionRouteId": "1025",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "6125",
+          "childhood2MonsterId": "6130",
+          "growthMonsterId": "6135"
+        },
+        {
+          "monsterEvolutionRouteId": "1026",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "6151",
+          "childhood2MonsterId": "6156",
+          "growthMonsterId": "6161"
+        },
+        {
+          "monsterEvolutionRouteId": "1027",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "6152",
+          "childhood2MonsterId": "6157",
+          "growthMonsterId": "6162"
+        },
+        {
+          "monsterEvolutionRouteId": "1028",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "6153",
+          "childhood2MonsterId": "6158",
+          "growthMonsterId": "6163"
+        },
+        {
+          "monsterEvolutionRouteId": "1029",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "6154",
+          "childhood2MonsterId": "6159",
+          "growthMonsterId": "6164"
+        },
+        {
+          "monsterEvolutionRouteId": "1030",
+          "eggMonsterId": "10003",
+          "childhood1MonsterId": "6155",
+          "childhood2MonsterId": "6160",
+          "growthMonsterId": "6165"
+        },
+        {
+          "monsterEvolutionRouteId": "1031",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6181",
+          "childhood2MonsterId": "6186",
+          "growthMonsterId": "6191"
+        },
+        {
+          "monsterEvolutionRouteId": "1032",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6182",
+          "childhood2MonsterId": "6187",
+          "growthMonsterId": "6192"
+        },
+        {
+          "monsterEvolutionRouteId": "1033",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6183",
+          "childhood2MonsterId": "6188",
+          "growthMonsterId": "6193"
+        },
+        {
+          "monsterEvolutionRouteId": "1034",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6184",
+          "childhood2MonsterId": "6189",
+          "growthMonsterId": "6194"
+        },
+        {
+          "monsterEvolutionRouteId": "1035",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "6185",
+          "childhood2MonsterId": "6190",
+          "growthMonsterId": "6195"
+        },
+        {
+          "monsterEvolutionRouteId": "1036",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6211",
+          "childhood2MonsterId": "6216",
+          "growthMonsterId": "6221"
+        },
+        {
+          "monsterEvolutionRouteId": "1037",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6212",
+          "childhood2MonsterId": "6217",
+          "growthMonsterId": "6222"
+        },
+        {
+          "monsterEvolutionRouteId": "1038",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6213",
+          "childhood2MonsterId": "6218",
+          "growthMonsterId": "6223"
+        },
+        {
+          "monsterEvolutionRouteId": "1039",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6214",
+          "childhood2MonsterId": "6219",
+          "growthMonsterId": "6224"
+        },
+        {
+          "monsterEvolutionRouteId": "1040",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6215",
+          "childhood2MonsterId": "6220",
+          "growthMonsterId": "6225"
+        },
+        {
+          "monsterEvolutionRouteId": "1041",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6241",
+          "childhood2MonsterId": "6246",
+          "growthMonsterId": "6251"
+        },
+        {
+          "monsterEvolutionRouteId": "1042",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6242",
+          "childhood2MonsterId": "6247",
+          "growthMonsterId": "6252"
+        },
+        {
+          "monsterEvolutionRouteId": "1043",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6243",
+          "childhood2MonsterId": "6248",
+          "growthMonsterId": "6253"
+        },
+        {
+          "monsterEvolutionRouteId": "1044",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6244",
+          "childhood2MonsterId": "6249",
+          "growthMonsterId": "6254"
+        },
+        {
+          "monsterEvolutionRouteId": "1045",
+          "eggMonsterId": "10001",
+          "childhood1MonsterId": "6245",
+          "childhood2MonsterId": "6250",
+          "growthMonsterId": "6255"
+        },
+        {
+          "monsterEvolutionRouteId": "2001",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "10011",
+          "childhood2MonsterId": "10016",
+          "growthMonsterId": "10021"
+        },
+        {
+          "monsterEvolutionRouteId": "2002",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "10012",
+          "childhood2MonsterId": "10017",
+          "growthMonsterId": "10022"
+        },
+        {
+          "monsterEvolutionRouteId": "2003",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "10013",
+          "childhood2MonsterId": "10018",
+          "growthMonsterId": "10023"
+        },
+        {
+          "monsterEvolutionRouteId": "2004",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "10014",
+          "childhood2MonsterId": "10019",
+          "growthMonsterId": "10024"
+        },
+        {
+          "monsterEvolutionRouteId": "2005",
+          "eggMonsterId": "10002",
+          "childhood1MonsterId": "10015",
+          "childhood2MonsterId": "10020",
+          "growthMonsterId": "10025"
+        }
+      ]
+    }
+  },
+  "venus_status": 1
+}
