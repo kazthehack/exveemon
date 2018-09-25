@@ -1,0 +1,1230 @@
+{
+    "userId": "4100374",
+    "compassCarrierId": 8,
+    "appUrlImg": "https://cdn-web-api-digimonlinkzww.akamaized.net/img/en/",
+    "languageCode": "en",
+    "osType": "2",
+    "resData": {
+        "990201": {
+            "soulM": [
+                {
+                    "soulId": "1070167",
+                    "soulName": "Alphamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Alphamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070168",
+                    "soulName": "UlforceVeedramon Data Fragment",
+                    "description": "A data fragment required to Digivolve into UlforceVeedramon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070169",
+                    "soulName": "Ebemon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Ebemon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070170",
+                    "soulName": "Imperialdramon DM Data Fragment",
+                    "description": "A data fragment required to Digivolve into Imperialdramon DM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070171",
+                    "soulName": "Imperialdramon FM Data Fragment",
+                    "description": "A data fragment required to Digivolve into Imperialdramon FM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070172",
+                    "soulName": "Vikemon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Vikemon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070173",
+                    "soulName": "VenomMyotismon Data Fragment",
+                    "description": "A data fragment required to Digivolve into VenomMyotismon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070174",
+                    "soulName": "WarGreymon Data Fragment",
+                    "description": "A data fragment required to Digivolve into WarGreymon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070175",
+                    "soulName": "Examon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Examon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070176",
+                    "soulName": "Ophanimon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Ophanimon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070177",
+                    "soulName": "Gaiomon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Gaiomon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070178",
+                    "soulName": "ChaosGallantmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into ChaosGallantmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070179",
+                    "soulName": "Gankoomon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Gankoomon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070180",
+                    "soulName": "Kuzuhamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Kuzuhamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070181",
+                    "soulName": "GranKuwagamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into GranKuwagamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070182",
+                    "soulName": "GroundLocomon Data Fragment",
+                    "description": "A data fragment required to Digivolve into GroundLocomon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070183",
+                    "soulName": "Craniamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Craniamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070184",
+                    "soulName": "Cherubimon (Good) Data Fragment",
+                    "description": "A data fragment required to Digivolve into Cherubimon (Good).",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070185",
+                    "soulName": "SaberLeomon Data Fragment",
+                    "description": "A data fragment required to Digivolve into SaberLeomon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070186",
+                    "soulName": "Sakuyamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Sakuyamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070187",
+                    "soulName": "Jesmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Jesmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070188",
+                    "soulName": "ShineGreymon Data Fragment",
+                    "description": "A data fragment required to Digivolve into ShineGreymon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070189",
+                    "soulName": "Justimon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Justimon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070190",
+                    "soulName": "Kentaurosmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Kentaurosmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070191",
+                    "soulName": "Seraphimon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Seraphimon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070192",
+                    "soulName": "MegaGargomon Data Fragment",
+                    "description": "A data fragment required to Digivolve into MegaGargomon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070193",
+                    "soulName": "TigerVespamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into TigerVespamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070194",
+                    "soulName": "Titamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Titamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070195",
+                    "soulName": "Dianamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Dianamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070196",
+                    "soulName": "Diaboromon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Diaboromon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070197",
+                    "soulName": "Creepymon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Creepymon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070198",
+                    "soulName": "Gallantmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Gallantmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070199",
+                    "soulName": "Dynasmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Dynasmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070200",
+                    "soulName": "Leopardmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Leopardmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070201",
+                    "soulName": "HiAndromon Data Fragment",
+                    "description": "A data fragment required to Digivolve into HiAndromon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070202",
+                    "soulName": "Barbamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Barbamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070203",
+                    "soulName": "BanchoLeomon Data Fragment",
+                    "description": "A data fragment required to Digivolve into BanchoLeomon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070204",
+                    "soulName": "Piedmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Piedmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070205",
+                    "soulName": "Puppetmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Puppetmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070206",
+                    "soulName": "PlatinumNumemon Data Fragment",
+                    "description": "A data fragment required to Digivolve into PlatinumNumemon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070207",
+                    "soulName": "BlackWarGreymon Data Fragment",
+                    "description": "A data fragment required to Digivolve into BlackWarGreymon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070208",
+                    "soulName": "PrinceMamemon Data Fragment",
+                    "description": "A data fragment required to Digivolve into PrinceMamemon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070209",
+                    "soulName": "Plesiomon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Plesiomon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070210",
+                    "soulName": "HerculesKabuterimon Data Fragment",
+                    "description": "A data fragment required to Digivolve into HerculesKabuterimon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070211",
+                    "soulName": "Beelzemon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Beelzemon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070212",
+                    "soulName": "Belphemon SM Data Fragment",
+                    "description": "A data fragment required to Digivolve into Belphemon SM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070213",
+                    "soulName": "Phoenixmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Phoenixmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070214",
+                    "soulName": "Magnadramon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Magnadramon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070215",
+                    "soulName": "Boltmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Boltmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070216",
+                    "soulName": "Mastemon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Mastemon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070217",
+                    "soulName": "MarineAngemon Data Fragment",
+                    "description": "A data fragment required to Digivolve into MarineAngemon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070218",
+                    "soulName": "Minervamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Minervamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070219",
+                    "soulName": "MirageGaogamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into MirageGaogamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070220",
+                    "soulName": "Machinedramon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Machinedramon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070221",
+                    "soulName": "MetalEtemon Data Fragment",
+                    "description": "A data fragment required to Digivolve into MetalEtemon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070222",
+                    "soulName": "MetalGarurumon Data Fragment",
+                    "description": "A data fragment required to Digivolve into MetalGarurumon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070223",
+                    "soulName": "MetalGarurumon (Black) Data Fragment",
+                    "description": "A data fragment required to Digivolve into MetalGarurumon (Black).",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070224",
+                    "soulName": "MetalSeadramon Data Fragment",
+                    "description": "A data fragment required to Digivolve into MetalSeadramon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070225",
+                    "soulName": "RustTyranomon Data Fragment",
+                    "description": "A data fragment required to Digivolve into RustTyranomon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070226",
+                    "soulName": "Leviamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Leviamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070227",
+                    "soulName": "Lilithmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Lilithmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070228",
+                    "soulName": "Ravemon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Ravemon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070229",
+                    "soulName": "LordKnightmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into LordKnightmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070230",
+                    "soulName": "Rosemon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Rosemon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070231",
+                    "soulName": "Lotosmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Lotosmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070232",
+                    "soulName": "Imperialdramon PM Data Fragment",
+                    "description": "A data fragment required to Digivolve into Imperialdramon PM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070233",
+                    "soulName": "Omegamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Omegamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070234",
+                    "soulName": "Omegamon Zwart Data Fragment",
+                    "description": "A data fragment required to Digivolve into Omegamon Zwart.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070235",
+                    "soulName": "Leopardmon LM Data Fragment",
+                    "description": "A data fragment required to Digivolve into Leopardmon LM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070236",
+                    "soulName": "Belphemon RM Data Fragment",
+                    "description": "A data fragment required to Digivolve into Belphemon RM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070237",
+                    "soulName": "Lucemon SM Data Fragment",
+                    "description": "A data fragment required to Digivolve into Lucemon SM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070239",
+                    "soulName": "Magnamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Magnamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070243",
+                    "soulName": "Maycrackmon VM Data Fragment",
+                    "description": "A data fragment required to Digivolve into Maycrackmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070283",
+                    "soulName": "Susanoomon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Susanoomon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070286",
+                    "soulName": "Omegamon Zwart D Data Fragment",
+                    "description": "A data fragment required to Digivolve into Omegamon Zwart D.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070288",
+                    "soulName": "Omegamon Alter-B Data Fragment",
+                    "description": "A data fragment required to Digivolve into Omegamon Alter-B.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070289",
+                    "soulName": "Gallantmon CM Data Fragment",
+                    "description": "A data fragment required to Digivolve into Gallantmon CM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070291",
+                    "soulName": "OmniShoutmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into OmniShoutmon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070303",
+                    "soulName": "ShineGreymon BM Data Fragment",
+                    "description": "A data fragment required to Digivolve into ShineGreymon BM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070304",
+                    "soulName": "MirageGaogamon BM Data Fragment",
+                    "description": "A data fragment required to Digivolve into MirageGaogamon BM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070305",
+                    "soulName": "Ravemon BM Data Fragment",
+                    "description": "A data fragment required to Digivolve into Ravemon BM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070306",
+                    "soulName": "Rosemon BM Data Fragment",
+                    "description": "A data fragment required to Digivolve into Rosemon BM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070311",
+                    "soulName": "Kimeramon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Kimeramon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070312",
+                    "soulName": "Millenniummon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Millenniummon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070313",
+                    "soulName": "Chaosdramon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Chaosdramon",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070317",
+                    "soulName": "Slayerdramon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Slayerdramon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070320",
+                    "soulName": "Brakedramon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Brakedramon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070326",
+                    "soulName": "Durandamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Durandamon",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070327",
+                    "soulName": "WarGreymon X Data Fragment",
+                    "description": "A data fragment required to Digivolve into WarGreymon X.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070328",
+                    "soulName": "MetalGarurumon X Data Fragment",
+                    "description": "A data fragment required to Digivolve into MetalGarurumon X.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070329",
+                    "soulName": "ShineGreymon RM Data Fragment",
+                    "description": "A data fragment required to Digivolve into ShineGreymon RM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070330",
+                    "soulName": "Raguelmon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Raguelmon",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070331",
+                    "soulName": "Gallantmon X Anti-body Data Fragment",
+                    "description": "A data fragment required to Digivolve into Gallantmon X Anti-body.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070332",
+                    "soulName": "KingEtemon Data Fragment",
+                    "description": "A data fragment required to Digivolve into KingEtemon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070333",
+                    "soulName": "AncientGreymon Data Fragment",
+                    "description": "A data fragment required to Digivolve into AncientGreymon",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070334",
+                    "soulName": "B WarGreymon X Data Fragment",
+                    "description": "A data fragment required to Digivolve into B WarGreymon X",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070336",
+                    "soulName": "Magnamon X Anti-body Data Fragment",
+                    "description": "A data fragment required to Digivolve into MagnamonX Anti-body .",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070337",
+                    "soulName": "Ophanimon FM Data Fragment",
+                    "description": "A data fragment required to Digivolve into Ophanimon FM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070338",
+                    "soulName": "UlforceVeedramon X Data Fragment",
+                    "description": "A data fragment required to Digivolve into UlforceVeedramon X.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070339",
+                    "soulName": "Omegamon MM Data Fragment",
+                    "description": "A data fragment required to Digivolve into Omegamon MM.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070340",
+                    "soulName": "Armageddemon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Armageddemon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070342",
+                    "soulName": "AncientGarurumon Data Fragment",
+                    "description": "A data fragment required to Digivolve into AncientGarurumon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070344",
+                    "soulName": "BlitzGreymon Data Fragment",
+                    "description": "A data fragment required to Digivolve into BlitzGreymon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1070345",
+                    "soulName": "CresGarurumon Data Fragment",
+                    "description": "A data fragment required to Digivolve into CresGarurumon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1076006",
+                    "soulName": "ShineGreymon Data Fragment",
+                    "description": "A data fragment required to Digivolve into ShineGreymon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1076012",
+                    "soulName": "HerculesKabuterimon Data Fragment",
+                    "description": "A data fragment required to Digivolve into HerculesKabuterimon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1076018",
+                    "soulName": "Gaiomon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Gaiomon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1076024",
+                    "soulName": "Sakuyamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Sakuyamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1076030",
+                    "soulName": "Plesiomon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Plesiomon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1076036",
+                    "soulName": "Leviamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Leviamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1076042",
+                    "soulName": "Dianamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Dianamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1076048",
+                    "soulName": "Beelzemon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Beelzemon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "1076054",
+                    "soulName": "Barbamon Data Fragment",
+                    "description": "A data fragment required to Digivolve into Barbamon.",
+                    "soulGroup": "1",
+                    "rare": "5",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2000001",
+                    "soulName": "Null Plugin ver1.0",
+                    "description": "A program encoded with a hint of Null energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2000002",
+                    "soulName": "Null Plugin ver2.0",
+                    "description": "A program encoded with Null energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "2",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2000003",
+                    "soulName": "Null Plugin ver3.0",
+                    "description": "A program encoded with powerful Null energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "3",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2000004",
+                    "soulName": "Null Plugin ver4.0",
+                    "description": "A program encoded with incredible Null energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "4",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2010001",
+                    "soulName": "Fire Plugin ver1.0",
+                    "description": "A program encoded with a hint of Fire energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2010002",
+                    "soulName": "Fire Plugin ver2.0",
+                    "description": "A program encoded with Fire energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "2",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2010003",
+                    "soulName": "Fire Plugin ver3.0",
+                    "description": "A program encoded with powerful Fire energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "3",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2010004",
+                    "soulName": "Fire Plugin ver4.0",
+                    "description": "A program encoded with incredible Fire energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "4",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2020001",
+                    "soulName": "Water Plugin ver1.0",
+                    "description": "A program encoded with a hint of Water energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2020002",
+                    "soulName": "Water Plugin ver2.0",
+                    "description": "A program encoded with Water energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "2",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2020003",
+                    "soulName": "Water Plugin ver3.0",
+                    "description": "A program encoded with powerful Water energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "3",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2020004",
+                    "soulName": "Water Plugin ver4.0",
+                    "description": "A program encoded with incredible Water energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "4",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2030001",
+                    "soulName": "Thunder Plugin ver1.0",
+                    "description": "A program encoded with a hint of Thunder energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2030002",
+                    "soulName": "Thunder Plugin ver2.0",
+                    "description": "A program encoded with Thunder energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "2",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2030003",
+                    "soulName": "Thunder Plugin ver3.0",
+                    "description": "A program encoded with powerful Thunder energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "3",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2030004",
+                    "soulName": "Thunder Plugin ver4.0",
+                    "description": "A program encoded with incredible Thunder energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "4",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2040001",
+                    "soulName": "Nature Plugin ver1.0",
+                    "description": "A program encoded with a hint of Nature energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2040002",
+                    "soulName": "Nature Plugin ver2.0",
+                    "description": "A program encoded with Nature energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "2",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2040003",
+                    "soulName": "Nature Plugin ver3.0",
+                    "description": "A program encoded with powerful Nature energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "3",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2040004",
+                    "soulName": "Nature Plugin ver4.0",
+                    "description": "A program encoded with incredible Nature energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "4",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2050001",
+                    "soulName": "Light Plugin ver1.0",
+                    "description": "A program encoded with a hint of Light energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2050002",
+                    "soulName": "Light Plugin ver2.0",
+                    "description": "A program encoded with Light energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "2",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2050003",
+                    "soulName": "Light Plugin ver3.0",
+                    "description": "A program encoded with powerful Light energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "3",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2050004",
+                    "soulName": "Light Plugin ver4.0",
+                    "description": "A program encoded with incredible Light energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "4",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2060001",
+                    "soulName": "Darkness Plugin ver1.0",
+                    "description": "A program encoded with a hint of Darkness energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2060002",
+                    "soulName": "Darkness Plugin ver2.0",
+                    "description": "A program encoded with Darkness energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "2",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2060003",
+                    "soulName": "Darkness Plugin ver3.0",
+                    "description": "A program encoded with powerful Darkness energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "3",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "2060004",
+                    "soulName": "Darkness Plugin ver4.0",
+                    "description": "A program encoded with incredible Darkness energy, used for Digivolution.",
+                    "soulGroup": "0",
+                    "rare": "4",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "3000001",
+                    "soulName": "Core Plugin ver1.0",
+                    "description": "A program required when Digivolving Digimon in the Volcanicdramon line.",
+                    "soulGroup": "2",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "3000002",
+                    "soulName": "Core Plugin ver2.0",
+                    "description": "A program required when Digivolving Digimon in the Volcanicdramon line.",
+                    "soulGroup": "2",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "3000003",
+                    "soulName": "Core Plugin ver3.0",
+                    "description": "A program required when Digivolving Digimon in the Volcanicdramon line.",
+                    "soulGroup": "2",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "4000001",
+                    "soulName": "Null Upgrade Data",
+                    "description": "A program required to Version Upgrade a Mirage Digimon.",
+                    "soulGroup": "3",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "4000003",
+                    "soulName": "Water Upgrade Data",
+                    "description": "A program required to Version Upgrade a Glacier Digimon.",
+                    "soulGroup": "3",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "4000005",
+                    "soulName": "Nature Upgrade Data",
+                    "description": "A program required to Version Upgrade an Earth Digimon.",
+                    "soulGroup": "3",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "4000006",
+                    "soulName": "Light Upgrade Data",
+                    "description": "A program required to Version Upgrade a Bright Digimon.",
+                    "soulGroup": "3",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "5000001",
+                    "soulName": "Null Re-factor",
+                    "description": "A storage card required to Upgrade the Status Effect Resistance of a Version-Upgraded Mirage Tribe Digimon.",
+                    "soulGroup": "4",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "5000003",
+                    "soulName": "Water Re-factor",
+                    "description": "A storage card required to Upgrade the Status Effect Resistance of a Version-Upgraded Glacier Tribe Digimon.",
+                    "soulGroup": "4",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "5000005",
+                    "soulName": "Nature Re-factor",
+                    "description": "A storage card required to Upgrade the Status Effect Resistance of a Version-Upgraded Earth Tribe Digimon.",
+                    "soulGroup": "4",
+                    "rare": "1",
+                    "priority": "1"
+                },
+                {
+                    "soulId": "5000006",
+                    "soulName": "Light Re-factor",
+                    "description": "A storage card required to Upgrade the Status Effect Resistance of a Version-Upgraded Bright Tribe Digimon.",
+                    "soulGroup": "4",
+                    "rare": "1",
+                    "priority": "1"
+                }
+            ]
+        }
+    },
+    "venus_status": 1
+}

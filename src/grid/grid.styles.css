@@ -6,3 +6,23 @@
 #pageGrid {
     padding-top: 0px;
 }
+
+#cardContent {
+    color: black;
+    font-size: 0.85rem;
+}
+
+.ui.card,
+.ui.cards>.card {
+  color: black;
+}
+
+.ui.card>.content>a.header,
+.ui.cards>.card>.content>a.header,
+.ui.card .meta,
+.ui.cards>.card .meta,
+.ui.card>.content>.description,
+.ui.cards>.card>.content>.description,
+.ui.cards>.card>.extra {
+  color: black;
+}

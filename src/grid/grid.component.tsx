@@ -51,6 +51,10 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
         this.createHeader = this.createHeader.bind(this);
 
         this.obtainMonsterIcon = this.obtainMonsterIcon.bind(this);
+        this.obtainMonsterName = this.obtainMonsterName.bind(this);
+        this.obtainDNAInfo = this.obtainDNAInfo.bind(this);
+        this.obtainRookieInfo = this.obtainRookieInfo.bind(this);
+
         this.resizeFn = props.resizeFn;
 
         this.state = Object.assign({}, this.state, {
@@ -85,10 +89,10 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
                             No Filter
                         </Label>
                         <Label as="a" basic>
-                            EVOL 
+                            EVOL
                         </Label>
                         <Label as="a" basic>
-                            Highest 
+                            Highest
                         </Label>
                     </Header.Content>
                 </Header>
@@ -106,10 +110,10 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
                             No Filter
                         </Label>
                         <Label as="a" basic>
-                            NEW 
+                            NEW
                         </Label>
                         <Label as="a" basic>
-                            Highest 
+                            Highest
                         </Label>
                     </Header.Content>
                 </Header>
@@ -146,7 +150,7 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
                 {this.state.pageHeader}
                 <Divider inverted />
                 <Grid centered>
-                    <Grid.Column width={16} id="pageGrid"> 
+                    <Grid.Column width={16} id="pageGrid">
                         <Scrollbar
                             ref={ref => {
                                 this.htmlContentScrollRef = ref;
@@ -191,14 +195,39 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
     }
 
     public obtainMonsterIcon(monsterId: string) {
-        return resourceLoader.ObtainMonsterIcon(monsterId, this.state.monsterData);
+        return resourceLoader.ObtainMonsterIcon(
+            monsterId,
+            this.state.monsterData,
+            this.state.monsterInfo
+        );
     }
 
+    public obtainMonsterName(monsterId: string) {
+        return resourceLoader.ObtainMonsterName(
+            monsterId,
+            this.state.monsterData,
+            this.state.monsterInfo
+        );
+    }
+
+    public obtainDNAInfo(userMonsterId: string) {
+        return resourceLoader.ObtainDNAInformation(userMonsterId, this.state.userMonsterList);
+    }
+
+    public obtainRookieInfo(userMonsterId: string) {
+        return resourceLoader.ObtainRookieInformation(
+            userMonsterId,
+            this.state.userMonsterList,
+            this.state.monsterEvolutionRoutes,
+            this.state.monsterInfo,
+            this.state.monsterData
+        );
+    }
     private createHomeGroup() {
         const houseGrid: object[] = [];
 
         // 7 - mega 6 - ultimate 5 - champion 4 - roookie 3 - intraining II 2 -
-        // intraining I
+        // 8 - Flamedramon, 9 - Magnamon
 
         for (let i = 7; i >= 4; i--) {
             let tempEvolGroup = [];
@@ -211,6 +240,35 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
                         this.state.monsterData
                     ) === i.toString()
             );
+
+            // Add support for flamedramon
+            if (i === 4) {
+                const appendMons = this.state.userMonsterList.filter(
+                    m =>
+                        resourceLoader.ObtainEvolutionInformation(
+                            m.monsterId,
+                            this.state.monsterInfo,
+                            this.state.monsterData
+                        ) === "8"
+                );
+
+                for (const appendMon of appendMons) {
+                    tempEvolGroup.push(appendMon);
+                }
+            } else if (i === 7) {
+                const appendMons = this.state.userMonsterList.filter(
+                    m =>
+                        resourceLoader.ObtainEvolutionInformation(
+                            m.monsterId,
+                            this.state.monsterInfo,
+                            this.state.monsterData
+                        ) === "9"
+                );
+
+                for (const appendMon of appendMons) {
+                    tempEvolGroup.push(appendMon);
+                }
+            }
 
             tempEvolGroup.sort((a: any, b: any) => {
                 if (parseInt(a.monsterId, 10) > parseInt(b.monsterId, 10)) {
@@ -228,25 +286,17 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
 
             for (const mon of tempEvolGroup) {
                 houseGrid.push(
-                    <Card>
+                    <Card id="cardContent">
                         <Image centered size="tiny" src={this.obtainMonsterIcon(mon.monsterId)} />
                         <Card.Content extra>
-                            <Icon name="dna" />
-                            DNA{" "}
-                            {resourceLoader.ObtainDNAInformation(
-                                mon.userMonsterId,
-                                this.state.userMonsterList
-                            )}
+                            {this.obtainMonsterName(mon.monsterId)}
                         </Card.Content>
                         <Card.Content extra>
-                            <Icon name="history" />{" "}
-                            {resourceLoader.ObtainRookieInformation(
-                                mon.userMonsterId,
-                                this.state.userMonsterList,
-                                this.state.monsterEvolutionRoutes,
-                                this.state.monsterInfo,
-                                this.state.monsterData
-                            )}
+                            <Icon name="dna" />
+                            DNA {this.obtainDNAInfo(mon.userMonsterId)}
+                        </Card.Content>
+                        <Card.Content extra>
+                            <Icon name="history" /> {this.obtainRookieInfo(mon.userMonsterId)}
                         </Card.Content>
                     </Card>
                 );
@@ -295,17 +345,10 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
 
         for (const mon of tempMonList) {
             labGrid.push(
-                <Card>
+                <Card id="cardContent">
                     <Image centered size="tiny" src={this.obtainMonsterIcon(mon.monsterId)} />
                     <Card.Content extra>
-                        <Icon name="history" />{" "}
-                        {resourceLoader.ObtainRookieInformation(
-                            mon.userMonsterId,
-                            this.state.userMonsterList,
-                            this.state.monsterEvolutionRoutes,
-                            this.state.monsterInfo,
-                            this.state.monsterData
-                        )}
+                        <Icon name="history" /> {this.obtainRookieInfo(mon.userMonsterId)}
                     </Card.Content>
                 </Card>
             );

@@ -87,6 +87,7 @@ export function ReadMonsterInfo(rootResourcePath: string): constants.IReadMonste
     for (const monsterData of tempJsonContent["resData"]["990103"]["monsterM"]) {
         const tempMonsterInfo = {
             growStep: monsterData["growStep"],
+            modelId: monsterData["modelId"],
             monsterGroupId: monsterData["monsterGroupId"],
             monsterName: monsterData["monsterName"]
         };

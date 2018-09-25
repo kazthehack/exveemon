@@ -30,6 +30,8 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
         super(props);
         this.createCardGroup = this.createCardGroup.bind(this);
         this.obtaineMonsterIdFromUserMonId = this.obtaineMonsterIdFromUserMonId.bind(this);
+        this.obtainDNAInfo = this.obtainDNAInfo.bind(this);
+        this.obtainRookieInfo = this.obtainRookieInfo.bind(this);
         this.resizeFn = props.resizeFn;
 
         this.state = Object.assign({}, this.state, {
@@ -91,13 +93,31 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
     }
 
     public obtainMonsterIcon(monsterId: string) {
-        return resourceLoader.ObtainMonsterIcon(monsterId, this.state.monsterData);
+        return resourceLoader.ObtainMonsterIcon(
+            monsterId,
+            this.state.monsterData,
+            this.state.monsterInfo
+        );
     }
 
     public obtaineMonsterIdFromUserMonId(monsterId: string) {
         return resourceLoader.ObtainMonsterIdFromUserMonsterId(
             monsterId,
             this.state.userMonsterList
+        );
+    }
+
+    public obtainDNAInfo(userMonsterId: string) {
+        return resourceLoader.ObtainDNAInformation(userMonsterId, this.state.userMonsterList);
+    }
+
+    public obtainRookieInfo(userMonsterId: string) {
+        return resourceLoader.ObtainRookieInformation(
+            userMonsterId,
+            this.state.userMonsterList,
+            this.state.monsterEvolutionRoutes,
+            this.state.monsterInfo,
+            this.state.monsterData
         );
     }
 
@@ -110,7 +130,7 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
             const tempCardGroup: object[] = [];
             for (const monCard of deck.monsterList) {
                 tempCardGroup.push(
-                    <Card>
+                    <Card id="cardContent">
                         <Image
                             centered
                             size="tiny"
@@ -123,21 +143,10 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
                         />
                         <Card.Content extra>
                             <Icon name="dna" />
-                            DNA{" "}
-                            {resourceLoader.ObtainDNAInformation(
-                                monCard.userMonsterId,
-                                this.state.userMonsterList
-                            )}
+                            DNA {this.obtainDNAInfo(monCard.userMonsterId)}
                         </Card.Content>
                         <Card.Content extra>
-                            <Icon name="history" />{" "}
-                            {resourceLoader.ObtainRookieInformation(
-                                monCard.userMonsterId,
-                                this.state.userMonsterList,
-                                this.state.monsterEvolutionRoutes,
-                                this.state.monsterInfo,
-                                this.state.monsterData
-                            )}
+                            <Icon name="history" /> {this.obtainRookieInfo(monCard.userMonsterId)}
                         </Card.Content>
                         <Card.Content extra>
                             {" "}
