@@ -114,28 +114,25 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
                         <Image
                             centered
                             size="tiny"
-                            src={this.obtainMonsterIcon(
-                                this.obtaineMonsterIdFromUserMonId(monCard.userMonsterId)
-                            )}
+                            src={
+                                this.state.rootResourcePath +
+                                this.obtainMonsterIcon(
+                                    this.obtaineMonsterIdFromUserMonId(monCard.userMonsterId)
+                                )
+                            }
                         />
                         <Card.Content extra>
                             <Icon name="dna" />
                             DNA{" "}
                             {resourceLoader.ObtainDNAInformation(
-                                resourceLoader.ObtainMonsterIdFromUserMonsterId(
-                                    monCard.userMonsterId,
-                                    this.state.userMonsterList
-                                ),
+                                monCard.userMonsterId,
                                 this.state.userMonsterList
                             )}
                         </Card.Content>
                         <Card.Content extra>
                             <Icon name="history" />{" "}
                             {resourceLoader.ObtainRookieInformation(
-                                resourceLoader.ObtainMonsterIdFromUserMonsterId(
-                                    monCard.userMonsterId,
-                                    this.state.userMonsterList
-                                ),
+                                monCard.userMonsterId,
                                 this.state.userMonsterList,
                                 this.state.monsterEvolutionRoutes,
                                 this.state.monsterInfo,

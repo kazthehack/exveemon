@@ -85,10 +85,10 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
                             No Filter
                         </Label>
                         <Label as="a" basic>
-                            LVL Sort
+                            EVOL 
                         </Label>
                         <Label as="a" basic>
-                            Highest Order
+                            Highest 
                         </Label>
                     </Header.Content>
                 </Header>
@@ -106,10 +106,10 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
                             No Filter
                         </Label>
                         <Label as="a" basic>
-                            NEW sort
+                            NEW 
                         </Label>
                         <Label as="a" basic>
-                            Highest Order
+                            Highest 
                         </Label>
                     </Header.Content>
                 </Header>
@@ -127,10 +127,10 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
                             With Medals
                         </Label>
                         <Label as="a" basic>
-                            NEW sort
+                            NEW
                         </Label>
                         <Label as="a" basic>
-                            Highest Order
+                            Highest
                         </Label>
                     </Header.Content>
                 </Header>
@@ -234,14 +234,14 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
                             <Icon name="dna" />
                             DNA{" "}
                             {resourceLoader.ObtainDNAInformation(
-                                mon.monsterId,
+                                mon.userMonsterId,
                                 this.state.userMonsterList
                             )}
                         </Card.Content>
                         <Card.Content extra>
                             <Icon name="history" />{" "}
                             {resourceLoader.ObtainRookieInformation(
-                                mon.monsterId,
+                                mon.userMonsterId,
                                 this.state.userMonsterList,
                                 this.state.monsterEvolutionRoutes,
                                 this.state.monsterInfo,
@@ -300,7 +300,7 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
                     <Card.Content extra>
                         <Icon name="history" />{" "}
                         {resourceLoader.ObtainRookieInformation(
-                            mon.monsterId,
+                            mon.userMonsterId,
                             this.state.userMonsterList,
                             this.state.monsterEvolutionRoutes,
                             this.state.monsterInfo,

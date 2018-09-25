@@ -32,8 +32,8 @@ export function ObtainMedalIcon(medalValue : string) {
     return "./resources/medals/" + medalValue + ".png";
 }
 
-export function ObtainDNAInformation(monsterId : string, userMonsterList : types.IMonster[]) {
-    const monster = userMonsterList.find(m => m.monsterId === monsterId);
+export function ObtainDNAInformation(userMonsterId : string, userMonsterList : types.IMonster[]) {
+    const monster = userMonsterList.find(m => m.userMonsterId === userMonsterId);
 
     if (!monster) {
         return "N/A";
@@ -58,8 +58,8 @@ export function ObtainEvolutionInformation(monsterId : string, monsterInfo : typ
     return monster.growStep;
 }
 
-export function ObtainRookieInformation(monsterId : string, userMonsterList : types.IMonster[], evolutionRoutes : types.IEvolutionRoute[], monsterInfo : types.IMonsterInfo[], monsterData : types.IMonsterData[]) {
-    const monster = userMonsterList.find(m => m.monsterId === monsterId);
+export function ObtainRookieInformation(userMonsterId : string, userMonsterList : types.IMonster[], evolutionRoutes : types.IEvolutionRoute[], monsterInfo : types.IMonsterInfo[], monsterData : types.IMonsterData[]) {
+    const monster = userMonsterList.find(m => m.userMonsterId === userMonsterId);
 
     if (!monster) {
         return "N/A";
@@ -96,10 +96,10 @@ export function ObtainMonsterIdFromUserMonsterId(userMonsterId : string, userMon
     }
 }
 
-export function ObtainMonsterMedals(monsterId : string, userMonsterList : types.IMonster[]) {
+export function ObtainMonsterMedals(userMonsterId : string, userMonsterList : types.IMonster[]) {
     const medalList = [];
 
-    const monster = userMonsterList.find(m => m.userMonsterId === monsterId);
+    const monster = userMonsterList.find(m => m.userMonsterId === userMonsterId);
 
     if (!monster) {
         return [];
