@@ -62,7 +62,7 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
                 </Header>
                 <Divider />
                 <Grid centered>
-                    <Grid.Column width={12} id="pageGrid">
+                    <Grid.Column width={14} id="pageGrid">
                         <Scrollbar
                             ref={ref => {
                                 this.htmlContentScrollRef = ref;
@@ -134,12 +134,9 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
                         <Image
                             centered
                             size="tiny"
-                            src={
-                                this.state.rootResourcePath +
-                                this.obtainMonsterIcon(
-                                    this.obtaineMonsterIdFromUserMonId(monCard.userMonsterId)
-                                )
-                            }
+                            src={this.obtainMonsterIcon(
+                                this.obtaineMonsterIdFromUserMonId(monCard.userMonsterId)
+                            )}
                         />
                         <Card.Content extra>
                             <Icon name="dna" />

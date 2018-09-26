@@ -11,22 +11,7 @@ import { withRouter } from "react-router";
 
 import "./grid.styles.css";
 
-import {
-    Button,
-    Card,
-    Dimmer,
-    Divider,
-    Form,
-    Grid,
-    Header,
-    Icon,
-    Image,
-    Label,
-    Loader,
-    Modal,
-    Segment,
-    TextArea
-} from "semantic-ui-react";
+import { Card, Divider, Grid, Header, Icon, Image, Label, Segment } from "semantic-ui-react";
 
 export class GridView extends React.Component<types.IGridProps, types.IGridState> {
     public htmlContentScrollRef: any;
@@ -288,9 +273,7 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
                 houseGrid.push(
                     <Card id="cardContent">
                         <Image centered size="tiny" src={this.obtainMonsterIcon(mon.monsterId)} />
-                        <Card.Content extra>
-                            {this.obtainMonsterName(mon.monsterId)}
-                        </Card.Content>
+                        <Card.Content extra>{this.obtainMonsterName(mon.monsterId)}</Card.Content>
                         <Card.Content extra>
                             <Icon name="dna" />
                             DNA {this.obtainDNAInfo(mon.userMonsterId)}

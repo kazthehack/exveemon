@@ -156,7 +156,7 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
     }
 
     public obtainMonsterIcon(monsterId: string) {
-        return resourceLoader.ObtainMonsterIcon(monsterId, this.state.monsterData);
+        return resourceLoader.ObtainMonsterIcon(monsterId, this.state.monsterData,this.state.monsterInfo);
     }
 
     public handleReadUserInfo() {
