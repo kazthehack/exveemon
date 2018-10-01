@@ -9,6 +9,8 @@ import * as resourceLoader from "../utility/resource_loader";
 
 import { withRouter } from "react-router";
 
+import HeaderView from "../header/header.component";
+
 import "./grid.styles.css";
 
 import { Card, Divider, Grid, Header, Icon, Image, Label, Segment } from "semantic-ui-react";
@@ -132,7 +134,7 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
     public render() {
         return (
             <div id="deckList">
-                {this.state.pageHeader}
+                <HeaderView />
                 <Divider inverted />
                 <Grid centered>
                     <Grid.Column width={16} id="pageGrid">

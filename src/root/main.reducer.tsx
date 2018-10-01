@@ -10,14 +10,18 @@ import { ParserReducer } from "../parser/parser.reducer";
 import * as proxyConstants from "../proxy/proxy.constants";
 import { ProxyReducer } from "../proxy/proxy.reducer";
 
+import * as aboutContants from "../about/about.constants";
+import { AboutReducer } from "../about/about.reducer";
+
 export type RootTypes =
     | parserConstants.ParserActionType
-    | proxyConstants.ProxyActionType;
+    | proxyConstants.ProxyActionType
+    | aboutContants.AboutActiontype;
 
 const RootReducer = combineReducers({
+    about: AboutReducer,
     parser: ParserReducer,
-    user: ProxyReducer,
-    
+    user: ProxyReducer
 });
 
 export const history = createBrowserHistory();

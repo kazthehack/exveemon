@@ -11,6 +11,7 @@ import { IRootState } from "../root/main.types";
 
 import { GridView } from "./grid.component";
 
+
 export function mapStateToProps({ user, parser }: IRootState) {
     return Object.assign(
         {},

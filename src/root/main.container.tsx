@@ -15,11 +15,10 @@ import { Divider, Grid } from "semantic-ui-react";
 
 import { Provider } from "react-redux";
 
+import { AboutContainer } from "../about/about.container";
 import { DeckContainer } from "../deck/deck.container";
 import { GridContainer } from "../grid/grid.container";
 import { HomeContainer } from "../home/home.container";
-
-import { AboutView } from "../about/about.component";
 
 import { history, RootStore } from "./main.reducer";
 
@@ -78,6 +77,7 @@ class Main extends React.Component<{
     public resizeWindow() {
         this.resizeElement("htmlScroll", 80);
         this.resizeElement("gridScroll", 55);
+        this.resizeElement("aboutScroll", 150);
     }
 
     public resizeElement(component: string, offset: number) {
@@ -233,7 +233,14 @@ class Main extends React.Component<{
                                                         <Route
                                                             exact
                                                             path="/about"
-                                                            render={props => <AboutView />}
+                                                            render={props => (
+                                                                <AboutContainer {...props} 
+                                                                resizeFn={this.resizeWindow}
+                                                                openBrwsrFn={this.openBrowserWindow}
+                                                                rootResourcePath={
+                                                                    this.rootResourcePath
+                                                                }/>
+                                                            )}
                                                         />
                                                         <Route
                                                             exact

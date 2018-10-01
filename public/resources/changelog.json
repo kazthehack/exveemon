@@ -1,0 +1,14 @@
+{
+    "changeLog": [
+        {
+            "header": "0.1.0 Beta hotfixes",
+            "content": "- Fixed icons for mutants and V2s \n - Fixed Rookie and DNA viewer bugs \n - Multiple aesthetic changes ",
+            "version": "0.1.1"
+        },
+        {
+            "header": "Initial Release",
+            "content": "- Proxy Implementation \n - Deck List Parsing \n - Rookie Viewer \n - Medal Viewer",
+            "version": "0.1.0"
+        }
+    ]
+}
