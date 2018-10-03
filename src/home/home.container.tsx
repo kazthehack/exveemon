@@ -21,6 +21,7 @@ export function mapStateToProps({ user, parser }: IRootState) {
             monsterData: parser.monsterData,
             monsterEvolutionRoutes: parser.evolutionRoutes,
             monsterInfo: parser.monsterInfo,
+            monsterSkills: parser.monsterSkills,
             playerInfo: user.playerInfo,
             userMonsterList: user.userMonsterList
         }
@@ -38,6 +39,8 @@ export function mapDispatchToProps(
             dispatch(parserActions.ReadMonsterInfo(rootResourcePath)),
         OnGetMonsterRoutes: (rootResourcePath: string) =>
             dispatch(parserActions.ReadMonsterRoute(rootResourcePath)),
+        OnGetMonsterSkills: (rootResourcePath: string) =>
+            dispatch(parserActions.ReadMonsterSkill(rootResourcePath)),
         OnReadUserInfo: () => parserActions.ReadFile(dispatch),
         OnWriteUserInfo: (userMonsterList: any, playerInfo: any, deckList: any) =>
             parserActions.WriteUserInfo(userMonsterList, playerInfo, deckList)

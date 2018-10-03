@@ -9,7 +9,8 @@ export function ParserReducer(
         state = {
             evolutionRoutes: [],
             monsterData: [],
-            monsterInfo: []
+            monsterInfo: [],
+            monsterSkills: []
         };
 
         return state;
@@ -27,6 +28,10 @@ export function ParserReducer(
         case constants.ACTION_STATE.READ_MONSTER_ROUTE_SUCCESS:
             return Object.assign({}, state, {
                 evolutionRoutes: action.payload.evolutionRoutes
+            });
+        case constants.ACTION_STATE.READ_MONSTER_SKILL_SUCCESS:
+            return Object.assign({}, state, {
+                monsterSkills: action.payload.monsterSkills
             });
         default:
             return state;

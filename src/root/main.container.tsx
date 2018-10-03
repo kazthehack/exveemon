@@ -155,12 +155,6 @@ class Main extends React.Component<{
                                                                 Lab
                                                             </Menu.Item>
                                                         </Link>
-                                                        <Link to={`/lab_medal`}>
-                                                            <Menu.Item as="a">
-                                                                <Icon name="lab" size="small" />
-                                                                Baby Medal
-                                                            </Menu.Item>
-                                                        </Link>
                                                         <Link to={`/about`}>
                                                             <Menu.Item as="a">
                                                                 <Icon
@@ -224,6 +218,9 @@ class Main extends React.Component<{
                                                                 <DeckContainer
                                                                     {...props}
                                                                     resizeFn={this.resizeWindow}
+                                                                    openBrwsrFn={
+                                                                        this.openBrowserWindow
+                                                                    }
                                                                     rootResourcePath={
                                                                         this.rootResourcePath
                                                                     }
@@ -234,12 +231,16 @@ class Main extends React.Component<{
                                                             exact
                                                             path="/about"
                                                             render={props => (
-                                                                <AboutContainer {...props} 
-                                                                resizeFn={this.resizeWindow}
-                                                                openBrwsrFn={this.openBrowserWindow}
-                                                                rootResourcePath={
-                                                                    this.rootResourcePath
-                                                                }/>
+                                                                <AboutContainer
+                                                                    {...props}
+                                                                    resizeFn={this.resizeWindow}
+                                                                    openBrwsrFn={
+                                                                        this.openBrowserWindow
+                                                                    }
+                                                                    rootResourcePath={
+                                                                        this.rootResourcePath
+                                                                    }
+                                                                />
                                                             )}
                                                         />
                                                         <Route
@@ -250,6 +251,9 @@ class Main extends React.Component<{
                                                                     {...props}
                                                                     gridLoc={"1"}
                                                                     resizeFn={this.resizeWindow}
+                                                                    openBrwsrFn={
+                                                                        this.openBrowserWindow
+                                                                    }
                                                                     rootResourcePath={
                                                                         this.rootResourcePath
                                                                     }
@@ -264,26 +268,16 @@ class Main extends React.Component<{
                                                                     {...props}
                                                                     gridLoc={"2"}
                                                                     resizeFn={this.resizeWindow}
+                                                                    openBrwsrFn={
+                                                                        this.openBrowserWindow
+                                                                    }
                                                                     rootResourcePath={
                                                                         this.rootResourcePath
                                                                     }
                                                                 />
                                                             )}
                                                         />
-                                                        <Route
-                                                            exact
-                                                            path="/lab_medal"
-                                                            render={props => (
-                                                                <GridContainer
-                                                                    {...props}
-                                                                    gridLoc={"3"}
-                                                                    resizeFn={this.resizeWindow}
-                                                                    rootResourcePath={
-                                                                        this.rootResourcePath
-                                                                    }
-                                                                />
-                                                            )}
-                                                        />
+                                                    
                                                     </Switch>
                                                 </div>
                                             </Grid.Row>

@@ -64,12 +64,14 @@ export function onGetMonsterList(content: any): constants.IMonsterListResponseRe
         const tempUserMonster = {
             attackAbility: userMonster["attackAbility"],
             attackAbilityFlg: userMonster["attackAbilityFlg"],
+            commonSkillId: userMonster["commonSkillId"],
             createTimeSec: userMonster["createTimeSec"],
             defaultSkillGroupSubId: userMonster["defaultSkillGroupSubId"],
             defenseAbility: userMonster["defenseAbility"],
             defenseAbilityFlg: userMonster["defenseAbilityFlg"],
             hpAbility: userMonster["hpAbility"],
             hpAbilityFlg: userMonster["hpAbilityFlg"],
+            leaderSkillId: userMonster["leaderSkillId"],
             monsterEvolutionRouteId: userMonster["monsterEvolutionRouteId"],
             monsterId: userMonster["monsterId"],
             spAttackAbility: userMonster["spAttackAbility"],
@@ -218,9 +220,7 @@ export function StartProxyServer(dispatch: Dispatch<constants.ProxyActionType>) 
 
             proxySocket.on("end", () => {
                 zlib.gunzip(body, (err, dezipped) => {
-
-                    if(err)
-                    {
+                    if (err) {
                         console.log(err);
                         console.log(body);
                     }

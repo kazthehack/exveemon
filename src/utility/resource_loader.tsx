@@ -90,6 +90,60 @@ export function ObtainDNAInformation(userMonsterId: string, userMonsterList: typ
     return monster.defaultSkillGroupSubId;
 }
 
+export function ObtainSkillName(monsterSkillId: string, monsterSkills: types.IMonsterSkill[]) {
+    const monsterSkill = monsterSkills.find(ms => ms.skillId === monsterSkillId);
+
+    if (monsterSkillId === "0" || monsterSkillId === "" || !monsterSkill) {
+        return "N/A";
+    }
+
+    return monsterSkill.name;
+}
+
+export function ObtainLeaderSkill(userMonsterId: string, userMonsterList: types.IMonster[]) {
+    const monster = userMonsterList.find(m => m.userMonsterId === userMonsterId);
+
+    if (!monster) {
+        return "N/A";
+    }
+
+    return monster.leaderSkillId;
+}
+
+export function ObtainLegacySkill(userMonsterId: string, userMonsterList: types.IMonster[]) {
+    const monster = userMonsterList.find(m => m.userMonsterId === userMonsterId);
+
+    if (!monster) {
+        return "N/A";
+    }
+
+    return monster.commonSkillId;
+}
+
+export function ObtainChortosLink(monsterId: string, monsterData: types.IMonsterData[]) {
+    const BASE_URL = "https://chortos.selfip.net/digimonlinks/monsters/";
+
+    const group = monsterData.find(m => m.monsterId === monsterId);
+
+    if (!group) {
+        return "";
+    }
+
+    return BASE_URL + group.monsterGroupId;
+}
+
+export function ObtainTakatomonLink(monsterId: string, monsterData: types.IMonsterData[]) {
+    const BASE_URL = "https://takatomon.net/?sd=";
+
+    const group = monsterData.find(m => m.monsterId === monsterId);
+
+    if (!group) {
+        return "";
+    }
+
+    return BASE_URL + group.monsterGroupId;
+}
+
 export function ObtainEvolutionInformation(
     monsterId: string,
     monsterInfo: types.IMonsterInfo[],

@@ -40,6 +40,7 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
         monsterData: [],
         monsterEvolutionRoutes: [],
         monsterInfo: [],
+        monsterSkills: [],
         playerInfo: {
             leadMonsterId: "",
             nickname: "",
@@ -52,7 +53,7 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
     constructor(props: any) {
         super(props);
         this.handleCaptureUserInfo = this.handleCaptureUserInfo.bind(this);
-        this.obtainMonsterCount = this.obtainMonsterCount.bind(this);
+
         this.obtainMonsterIcon = this.obtainMonsterIcon.bind(this);
         this.handleReadUserInfo = this.handleReadUserInfo.bind(this);
         this.handleWriteUserInfo = this.handleWriteUserInfo.bind(this);
@@ -96,25 +97,33 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
             deckList: nextProps.deckList,
             houseCount:
                 nextProps.userMonsterList.length > 0
-                    ? this.obtainMonsterCount("0", nextProps.userMonsterList) +
-                      this.obtainMonsterCount("1", nextProps.userMonsterList)
+                    ? statisticsUtility.ObtainHouseCount(
+                          nextProps.userMonsterList,
+                          nextProps.monsterInfo,
+                          nextProps.monsterData
+                      )
                     : this.state.houseCount,
             labCount:
                 nextProps.userMonsterList.length > 0
-                    ? this.obtainMonsterCount("2", nextProps.userMonsterList)
+                    ? statisticsUtility.ObtainLabCount(
+                          nextProps.userMonsterList,
+                          nextProps.monsterInfo,
+                          nextProps.monsterData
+                      )
                     : this.state.labCount,
             monsterData: nextProps.monsterData,
             monsterEvolutionRoutes: nextProps.monsterEvolutionRoutes,
             monsterInfo: nextProps.monsterInfo,
+            monsterSkills: nextProps.monsterSkills,
             playerInfo: nextProps.playerInfo,
             rootResourcePath: nextProps.rootResourcePath !== "" ? nextProps.rootResourcePath : "",
             userMonsterList: nextProps.userMonsterList
         });
     }
 
-    public obtainMonsterCount(location: string, userMonsterList: any) {
-        return statisticsUtility.ObtainMonsterCount(location, userMonsterList);
-    }
+    // public obtainMonsterCount(location: string, userMonsterList: any) {
+    //     return statisticsUtility.ObtainMonsterCount(location, userMonsterList);
+    // }
 
     public componentDidUpdate() {
         console.log("home did update");
@@ -128,6 +137,10 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
 
         if (this.state.monsterInfo.length === 0) {
             this.props.OnGetMonsterDetails(this.state.rootResourcePath);
+        }
+
+        if (this.state.monsterSkills.length === 0) {
+            this.props.OnGetMonsterSkills(this.state.rootResourcePath);
         }
 
         if (
@@ -156,7 +169,11 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
     }
 
     public obtainMonsterIcon(monsterId: string) {
-        return resourceLoader.ObtainMonsterIcon(monsterId, this.state.monsterData,this.state.monsterInfo);
+        return resourceLoader.ObtainMonsterIcon(
+            monsterId,
+            this.state.monsterData,
+            this.state.monsterInfo
+        );
     }
 
     public handleReadUserInfo() {
@@ -231,8 +248,7 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
                                             <Grid.Column width={8} centered textAlign="center">
                                                 <a>
                                                     <Icon name="home" size="big" />
-                                                    <br /> {this.state.houseCount}
-                                                    Monsters
+                                                    <br /> {this.state.houseCount} Monsters
                                                 </a>
                                             </Grid.Column>
                                             <Grid.Column width={8} centered textAlign="center">

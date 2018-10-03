@@ -4,6 +4,7 @@ export enum ACTION_STATE {
     RECEIVE_DECK_LIST_SUCCESS = "RECEIVE_DECK_LIST_SUCCESS",
     RECEIVE_PLAYER_INFO_SUCCESS = "RECEIVE_PLAYER_INFO_SUCCESS",
     RECEIVE_MONSTER_LIST_SUCCESS = "RECEIVE_MONSTER_LIST_SUCCESS",
+    RECEIVE_PASSTHROUGH = "RECEIVE_PASSTHROUGH",
     RECEIVE_USER_INFO_FAIL = "RECEIVE_USER_INFO_FAIL"
 }
 
@@ -29,10 +30,11 @@ export interface IMonsterListResponseResult {
 }
 
 export interface IGenericResponse {
-    type: ACTION_STATE.RECEIVE_USER_INFO_FAIL
+    type: ACTION_STATE.RECEIVE_PASSTHROUGH
+    payload: {
+        message: string
+    }
 }
-
-
 
 export type ProxyActionType =
     | IDeckResponseResult

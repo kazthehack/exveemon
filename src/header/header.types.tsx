@@ -31,11 +31,6 @@ export const FilterOptions = [
 
 export const SortOptions = [
     {
-        key: SORT.LVL,
-        text: "LVL",
-        value: SORT.LVL
-    },
-    {
         key: SORT.NEW,
         text: "NEW",
         value: SORT.NEW
@@ -48,32 +43,30 @@ export const SortOptions = [
 ];
 
 export interface IHeaderProps {
+    config: IConfiguration;
+    headerTitle: string;
+    headerIcon: string;
+    headerDescription: string;
+    UpdateConfig: (config: IConfiguration) => void;
+}
+
+export interface IConfiguration {
     filter: FILTER;
     sort: SORT;
     isMedalView: boolean;
     isRookieView: boolean;
+    isShowDNA: boolean;
     isShowLegacy: boolean;
     isShowLS: boolean;
     isShowEvolution: boolean;
     isShowLink: boolean;
-    isDeck: boolean; 
-    headerTitle: string;
-    headerIcon: string;
-    headerDescription: string;
 }
 
 export interface IHeaderState {
-    filter: FILTER;
-    sort: SORT;
-    isDeck: boolean; 
-    isMedalView: boolean;
-    isRookieView: boolean;
-    isShowLegacy: boolean;
-    isShowLS: boolean;
-    isShowEvolution: boolean;
-    isShowLink: boolean;
+    config: IConfiguration;
     headerTitle: string;
     headerIcon: string;
     headerDescription: string;
-    SetFilters: () => void;
+    isDeck: boolean;
+    isDirty: boolean;
 }

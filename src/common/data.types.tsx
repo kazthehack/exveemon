@@ -39,6 +39,8 @@ export interface IMonster {
     monsterId: string;
     defaultSkillGroupSubId: string;
     monsterEvolutionRouteId: string;
+    leaderSkillId: string;
+    commonSkillId: string;
     hpAbilityFlg: string;
     hpAbility: string;
     attackAbilityFlg: string;
@@ -53,4 +55,10 @@ export interface IMonster {
     speedAbility: string;
     statusFlgs: string /* Location 1 - House, 2 - Farm*/;
     createTimeSec: string;
+}
+
+export interface IMonsterSkill {
+    skillId: string;
+    name: string;
+    description: string;
 }

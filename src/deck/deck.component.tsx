@@ -1,4 +1,4 @@
-/* tslint:disable no-console jsx-boolean-value*/
+/* tslint:disable no-console jsx-boolean-value jsx-no-lambda*/
 
 import * as React from "react";
 import Scrollbar from "react-perfect-scrollbar";
@@ -11,17 +11,33 @@ import { withRouter } from "react-router";
 
 import "./deck.styles.css";
 
-import { Card, Divider, Grid, Header, Icon, Image, Label, Segment } from "semantic-ui-react";
+import { HeaderContainer } from "../header/header.container";
+import * as headerTypes from "../header/header.types";
+
+import { Card, Divider, Grid, Icon, Image, Label, Segment } from "semantic-ui-react";
 
 export class DeckView extends React.Component<types.IDeckProps, types.IDeckState> {
     public htmlContentScrollRef: any;
 
     public state: types.IDeckState = {
+        config: {
+            filter: headerTypes.FILTER.NO_FILTER,
+            isMedalView: false,
+            isRookieView: false,
+            isShowDNA: false,
+            isShowEvolution: false,
+            isShowLS: false,
+            isShowLegacy: false,
+            isShowLink: false,
+            sort: headerTypes.SORT.NEW
+        },
         deckList: [],
         deckPageContent: [],
+        isDirty: false,
         monsterData: [],
         monsterEvolutionRoutes: [],
         monsterInfo: [],
+        monsterSkills: [],
         rootResourcePath: "",
         userMonsterList: []
     };
@@ -32,7 +48,15 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
         this.obtaineMonsterIdFromUserMonId = this.obtaineMonsterIdFromUserMonId.bind(this);
         this.obtainDNAInfo = this.obtainDNAInfo.bind(this);
         this.obtainRookieInfo = this.obtainRookieInfo.bind(this);
+        this.obtainMonsterName = this.obtainMonsterName.bind(this);
         this.resizeFn = props.resizeFn;
+        this.openBrwsrFn = props.openBrwsrFn;
+
+        this.obtainMonsterSkillName = this.obtainMonsterSkillName.bind(this);
+        this.obtainMonsterLeaderSkill = this.obtainMonsterLeaderSkill.bind(this);
+        this.obtainMonsterLegacySkill = this.obtainMonsterLegacySkill.bind(this);
+        this.obtainDetailsLink = this.obtainDetailsLink.bind(this);
+        this.obtainEvolutionLink = this.obtainEvolutionLink.bind(this);
 
         this.state = Object.assign({}, this.state, {
             deckList: props.deckList,
@@ -48,18 +72,14 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
         // Do nothing
     }
 
+    public openBrwsrFn(url: string): any {
+        // Do nothing
+    }
+
     public render() {
         return (
             <div id="deckList">
-                <Header as="h3" inverted>
-                    <Icon name="group" inverted />
-                    <Header.Content>
-                        Party Viewer
-                        <Header.Subheader inverted>
-                            Check details of your team members
-                        </Header.Subheader>
-                    </Header.Content>
-                </Header>
+                <HeaderContainer {...this.props} isDeck={true} />
                 <Divider />
                 <Grid centered>
                     <Grid.Column width={14} id="pageGrid">
@@ -82,12 +102,30 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
         this.resizeFn();
     }
 
+    public componentDidUpdate() {
+        if (this.state.isDirty) {
+            this.createCardGroup();
+        }
+    }
+
     public componentWillReceiveProps(nextProps: types.IDeckProps) {
+        console.log("deck received props");
+        console.log(nextProps);
+
+        let isForUpdate = false;
+
+        if (this.state.config !== nextProps.config) {
+            isForUpdate = true;
+        }
+
         this.setState({
+            config: nextProps.config,
             deckList: nextProps.deckList,
+            isDirty: isForUpdate,
             monsterData: nextProps.monsterData,
             monsterEvolutionRoutes: nextProps.monsterEvolutionRoutes,
             monsterInfo: nextProps.monsterInfo,
+            monsterSkills: nextProps.monsterSkills,
             userMonsterList: nextProps.userMonsterList
         });
     }
@@ -120,6 +158,33 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
             this.state.monsterData
         );
     }
+    public obtainMonsterName(monsterId: string) {
+        return resourceLoader.ObtainMonsterName(
+            monsterId,
+            this.state.monsterData,
+            this.state.monsterInfo
+        );
+    }
+
+    public obtainMonsterSkillName(monsterSkillId: string) {
+        return resourceLoader.ObtainSkillName(monsterSkillId, this.state.monsterSkills);
+    }
+
+    public obtainMonsterLeaderSkill(userMonsterId: string) {
+        return resourceLoader.ObtainLeaderSkill(userMonsterId, this.state.userMonsterList);
+    }
+
+    public obtainMonsterLegacySkill(userMonsterId: string) {
+        return resourceLoader.ObtainLegacySkill(userMonsterId, this.state.userMonsterList);
+    }
+
+    public obtainDetailsLink(monsterId: string) {
+        return resourceLoader.ObtainChortosLink(monsterId, this.state.monsterData);
+    }
+
+    public obtainEvolutionLink(monsterId: string) {
+        return resourceLoader.ObtainTakatomonLink(monsterId, this.state.monsterData);
+    }
 
     private createCardGroup() {
         const cardGrid: object[] = [];
@@ -139,16 +204,99 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
                             )}
                         />
                         <Card.Content extra>
-                            <Icon name="dna" />
-                            DNA {this.obtainDNAInfo(monCard.userMonsterId)}
+                            {this.obtainMonsterName(
+                                this.obtaineMonsterIdFromUserMonId(monCard.userMonsterId)
+                            )}
                         </Card.Content>
-                        <Card.Content extra>
-                            <Icon name="history" /> {this.obtainRookieInfo(monCard.userMonsterId)}
-                        </Card.Content>
-                        <Card.Content extra>
-                            {" "}
-                            <Label.Group>{this.createMedalGrid(monCard.userMonsterId)}</Label.Group>
-                        </Card.Content>
+                        {this.state.config.isShowDNA ? (
+                            <Card.Content extra>
+                                <Icon name="dna" />
+                                DNA {this.obtainDNAInfo(monCard.userMonsterId)}
+                            </Card.Content>
+                        ) : (
+                            ""
+                        )}
+                        {this.state.config.isRookieView ? (
+                            <Card.Content extra>
+                                <Icon name="history" />{" "}
+                                {this.obtainRookieInfo(monCard.userMonsterId)}
+                            </Card.Content>
+                        ) : (
+                            ""
+                        )}
+                        {this.state.config.isShowLS ? (
+                            <Card.Content extra>
+                                Leader:{" "}
+                                {this.obtainMonsterSkillName(
+                                    this.obtainMonsterLeaderSkill(monCard.userMonsterId)
+                                )}
+                            </Card.Content>
+                        ) : (
+                            ""
+                        )}
+                        {this.state.config.isShowLegacy ? (
+                            <Card.Content extra>
+                                Legacy:{" "}
+                                {this.obtainMonsterSkillName(
+                                    this.obtainMonsterLegacySkill(monCard.userMonsterId)
+                                )}
+                            </Card.Content>
+                        ) : (
+                            ""
+                        )}
+                        {this.state.config.isMedalView ? (
+                            <Card.Content extra>
+                                <Label.Group>
+                                    {this.createMedalGrid(monCard.userMonsterId)}
+                                </Label.Group>
+                            </Card.Content>
+                        ) : (
+                            ""
+                        )}
+                        {this.state.config.isShowEvolution ? (
+                            <Card.Content extra>
+                                <Label
+                                    as="a"
+                                    image
+                                    onClick={() => {
+                                        this.openBrwsrFn(
+                                            this.obtainEvolutionLink(
+                                                this.obtaineMonsterIdFromUserMonId(
+                                                    monCard.userMonsterId
+                                                )
+                                            )
+                                        );
+                                    }}
+                                    size="medium"
+                                >
+                                    <img src="./resources/takatomon.png" /> Takatomon
+                                </Label>
+                            </Card.Content>
+                        ) : (
+                            ""
+                        )}
+                        {this.state.config.isShowLink ? (
+                            <Card.Content extra>
+                                <Label
+                                    as="a"
+                                    image
+                                    onClick={() => {
+                                        this.openBrwsrFn(
+                                            this.obtainDetailsLink(
+                                                this.obtaineMonsterIdFromUserMonId(
+                                                    monCard.userMonsterId
+                                                )
+                                            )
+                                        );
+                                    }}
+                                    size="medium"
+                                >
+                                    <img src="./resources/av_l.jpg" /> Chortos-2
+                                </Label>
+                            </Card.Content>
+                        ) : (
+                            ""
+                        )}
                     </Card>
                 );
             }
@@ -163,7 +311,7 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
             teamCnt += 1;
         }
 
-        this.setState({ deckPageContent: cardGrid });
+        this.setState({ deckPageContent: cardGrid, isDirty: false });
     }
 
     private createMedalGrid(monsterId: string) {

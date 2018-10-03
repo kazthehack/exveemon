@@ -13,13 +13,18 @@ import { ProxyReducer } from "../proxy/proxy.reducer";
 import * as aboutContants from "../about/about.constants";
 import { AboutReducer } from "../about/about.reducer";
 
+import * as headerConstants from "../header/header.constants";
+import { HeaderReducer } from "../header/header.reducer";
+
 export type RootTypes =
     | parserConstants.ParserActionType
     | proxyConstants.ProxyActionType
-    | aboutContants.AboutActiontype;
+    | aboutContants.AboutActiontype
+    | headerConstants.HeaderActiontype;
 
 const RootReducer = combineReducers({
     about: AboutReducer,
+    header: HeaderReducer,
     parser: ParserReducer,
     user: ProxyReducer
 });

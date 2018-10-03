@@ -11,14 +11,16 @@ import { IRootState } from "../root/main.types";
 
 import { DeckView } from "./deck.component";
 
-export function mapStateToProps({ user, parser }: IRootState) {
+export function mapStateToProps({ user, parser, header }: IRootState) {
     return Object.assign(
         {},
         {
+            config: header.config,
             deckList: user.deckList,
             monsterData: parser.monsterData,
             monsterEvolutionRoutes: parser.evolutionRoutes,
             monsterInfo: parser.monsterInfo,
+            monsterSkills: parser.monsterSkills,
             userMonsterList: user.userMonsterList
         }
     );

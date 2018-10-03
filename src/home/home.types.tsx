@@ -7,10 +7,12 @@ export interface IHomeProps {
     monsterEvolutionRoutes: types.IEvolutionRoute[];
     monsterInfo: types.IMonsterInfo[];
     monsterData: types.IMonsterData[];
+    monsterSkills: types.IMonsterSkill[];
     OnCaptureUserInfo: () => void;
     OnGetMonsterData: (rootResourcePath: string) => void;
     OnGetMonsterDetails: (rootResourcePath: string) => void;
     OnGetMonsterRoutes: (rootResourcePath: string) => void;
+    OnGetMonsterSkills: (rootResourcePath: string) => void;
     OnReadUserInfo: () => void;
     OnWriteUserInfo: (userMonsterList: any, playerInfo: any, deckList: any) => void;
 }
@@ -23,6 +25,7 @@ export interface IHomeState {
     monsterEvolutionRoutes: types.IEvolutionRoute[];
     monsterInfo: types.IMonsterInfo[];
     monsterData: types.IMonsterData[];
+    monsterSkills: types.IMonsterSkill[];
     rootResourcePath: string;
     playerInfo: types.IPlayerInfo;
     userMonsterList: types.IMonster[];

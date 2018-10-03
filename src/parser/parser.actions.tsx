@@ -11,6 +11,35 @@ import { Dispatch } from "redux";
 import * as proxyActions from "../proxy/proxy.actions";
 import * as proxyConstants from "../proxy/proxy.constants";
 
+export function ReadMonsterSkill(rootResourcePath: string): constants.IReadMonsterSkillSuccess {
+    const resultMonsterSkills: types.IMonsterSkill[] = [];
+    let tempJsonContent;
+
+    try {
+        const tempFileContent = fs.readFileSync(rootResourcePath + constants.MONSTER_SKILL_PATH);
+        tempJsonContent = JSON.parse(tempFileContent);
+    } catch (e) {
+        console.log(e);
+    }
+
+    for (const monsterSkill of tempJsonContent["resData"]["990108"]["skillM"]) {
+        const tempMonsterSkill = {
+            description: monsterSkill["description"],
+            name: monsterSkill["name"],
+            skillId: monsterSkill["skillId"]
+        };
+
+        resultMonsterSkills.push(tempMonsterSkill);
+    }
+
+    return {
+        payload: {
+            monsterSkills: resultMonsterSkills
+        },
+        type: constants.ACTION_STATE.READ_MONSTER_SKILL_SUCCESS
+    };
+}
+
 export function ReadMonsterData(rootResourcePath: string): constants.IReadMonsterDataSuccess {
     const resultMonsterData = [];
     let tempJsonContent;
