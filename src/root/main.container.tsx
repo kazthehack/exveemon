@@ -53,7 +53,6 @@ class Main extends React.Component<{
 
         if (process.resourcesPath.indexOf("node_modules") === -1) {
             console.log("Production build");
-            console.log(process.resourcesPath);
             this.rootResourcePath = process.resourcesPath + "\\app\\";
         } else {
             console.log("Dev Build");

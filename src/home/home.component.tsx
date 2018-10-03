@@ -37,10 +37,12 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
         houseCount: 0,
         isLoading: false,
         labCount: 0,
+        message: "",
         monsterData: [],
         monsterEvolutionRoutes: [],
         monsterInfo: [],
         monsterSkills: [],
+        networkAddresses: [],
         playerInfo: {
             leadMonsterId: "",
             nickname: "",
@@ -57,13 +59,9 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
         this.obtainMonsterIcon = this.obtainMonsterIcon.bind(this);
         this.handleReadUserInfo = this.handleReadUserInfo.bind(this);
         this.handleWriteUserInfo = this.handleWriteUserInfo.bind(this);
-        this.getIpAddress = this.getIpAddress.bind(this);
-        // this.getInterfaces = this.getInterfaces.bind(this); this.handleOpenBrowser =
+        this.obtainNetworkAddresses = this.obtainNetworkAddresses.bind(this);
         // this.handleOpenBrowser.bind(this); this.resizeFn = props.resizeFn;
         // this.openBrwsrFn = props.openBrwsrFn;
-
-        console.log("home constructed");
-        console.log(props);
 
         this.state = Object.assign({}, this.state, {
             rootResourcePath: props.rootResourcePath
@@ -82,6 +80,34 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
         // this.openBrwsrFn(this.state.url + this.state.sampleurl);
     }
 
+    public obtainNetworkAddresses() {
+        const networks = os.networkInterfaces();
+        const ipAddresses = [];
+
+        console.log("Net Acquired");
+
+        for (const ifs of Object.keys(networks)) {
+            const tempIpAddress = networks[ifs].find((m: any) => m.family === "IPv4");
+            
+            // Ignore local IP Addresses
+            if (tempIpAddress.address === "127.0.0.1")
+            {
+                continue;
+            }
+
+            ipAddresses.push(
+                <p>
+                    {tempIpAddress.address}
+                    :2113
+                </p>
+            );
+        }
+
+        this.setState({
+            networkAddresses: ipAddresses
+        });
+    }
+
     public handleCaptureUserInfo() {
         this.setState({ isLoading: true });
         this.props.OnCaptureUserInfo();
@@ -89,7 +115,7 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
 
     public componentDidMount() {
         this.resizeFn();
-        this.getIpAddress();
+        this.obtainNetworkAddresses();
     }
 
     public componentWillReceiveProps(nextProps: any) {
@@ -111,6 +137,7 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
                           nextProps.monsterData
                       )
                     : this.state.labCount,
+            message: nextProps.message,
             monsterData: nextProps.monsterData,
             monsterEvolutionRoutes: nextProps.monsterEvolutionRoutes,
             monsterInfo: nextProps.monsterInfo,
@@ -121,12 +148,7 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
         });
     }
 
-    // public obtainMonsterCount(location: string, userMonsterList: any) {
-    //     return statisticsUtility.ObtainMonsterCount(location, userMonsterList);
-    // }
-
     public componentDidUpdate() {
-        console.log("home did update");
         if (this.state.monsterData.length === 0) {
             this.props.OnGetMonsterData(this.state.rootResourcePath);
         }
@@ -151,21 +173,6 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
         ) {
             this.setState({ isLoading: false });
         }
-    }
-
-    public getIpAddress() {
-        const interfaces = os.networkInterfaces();
-        const addresses = [];
-        for (const k of interfaces) {
-            for (const k2 of interfaces[k]) {
-                const address = interfaces[k][k2];
-                if (address.family === "IPv4" && !address.internal) {
-                    addresses.push(address.address);
-                }
-            }
-        }
-        console.log("Get IP!");
-        console.log(addresses);
     }
 
     public obtainMonsterIcon(monsterId: string) {
@@ -194,7 +201,13 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
                 <Dimmer.Dimmable dimmed={this.state.isLoading}>
                     <Dimmer inverted active={this.state.isLoading}>
                         <Loader>
-                            Proxy server is now waiting for packets.{" "}
+                            <p>Proxy server is now running on:</p>
+                            {this.state.networkAddresses}
+                            {this.state.message !== "" ? (
+                                <p>Received Packets from: {this.state.message}</p>
+                            ) : (
+                                ""
+                            )}
                             {/* {this.getInterfaces()}
                             :2116) */}
                         </Loader>

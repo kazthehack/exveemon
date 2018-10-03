@@ -18,7 +18,6 @@ export function AboutReducer(
 
     switch (action.type) {
         case constants.ACTION_STATE.READ_CHANGE_LOG_SUCCESS:
-        console.log("Reducer triggered");
             return Object.assign({}, state, {
                 changeLogs: action.payload.changelogs
             });

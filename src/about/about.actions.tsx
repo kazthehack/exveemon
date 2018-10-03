@@ -6,8 +6,6 @@ import * as constants from "./about.constants";
 import * as types from "./about.types";
 
 export function ObtainChangeLog(rootResourcePath: string): constants.IReadChangeLogSuccess {
-    console.log("Action triggered");
-
     const resultChangeLog: types.IChangeLog[] = [];
     let tempJsonContent;
 
@@ -16,7 +14,6 @@ export function ObtainChangeLog(rootResourcePath: string): constants.IReadChange
         tempJsonContent = JSON.parse(tempFileContent);
     } catch {
         console.log("Error reading files!");
-        // return
     }
 
     for (const changeLog of tempJsonContent["changeLog"]) {
@@ -28,9 +25,6 @@ export function ObtainChangeLog(rootResourcePath: string): constants.IReadChange
 
         resultChangeLog.push(tempChangeLog);
     }
-
-    console.log("finished parsing!");
-    console.log(resultChangeLog);
 
     return {
         payload: {

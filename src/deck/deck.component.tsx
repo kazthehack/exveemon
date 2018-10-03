@@ -109,8 +109,6 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
     }
 
     public componentWillReceiveProps(nextProps: types.IDeckProps) {
-        console.log("deck received props");
-        console.log(nextProps);
 
         let isForUpdate = false;
 

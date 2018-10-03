@@ -108,39 +108,32 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
         );
     }
 
-    public componentDidUpdate()
-    {
-        if(this.state.isDirty)
-        {
+    public componentDidUpdate() {
+        if (this.state.isDirty) {
             this.createCardGroup(this.state.location);
         }
     }
 
     public componentDidMount() {
-        // Do nothing
         this.resizeFn();
-        console.log("Component Did Mount");
         this.createCardGroup(this.state.location);
-        // this.createHeader(this.state.location);
     }
 
     public componentWillReceiveProps(nextProps: any) {
-        console.log("recived props");
-        console.log(nextProps);
         if (!nextProps.gridLoc) {
             // Reset if gridLoc is undefined
             this.setState({ location: "" });
         } else if (this.state.location !== nextProps.gridLoc) {
             this.createCardGroup(nextProps.gridLoc);
-            //  this.createHeader(nextProps.gridLoc);
             this.setState({ location: nextProps.location });
         }
-	
+
         let isForUpdate = false;
 
         if (this.state.config !== nextProps.config) {
             isForUpdate = true;
         }
+
         this.setState({
             config: nextProps.config,
             isDirty: isForUpdate,
@@ -267,6 +260,7 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
     private applyLeaderFilter(monsterList: data.IMonster[]): data.IMonster[] {
         let tempMonsterList: data.IMonster[] = [];
 
+        console.log("Leader Filter Applied!");
         tempMonsterList = monsterList.filter(m => m.leaderSkillId !== "0");
 
         return tempMonsterList;
@@ -347,9 +341,6 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
 
     private createCardGroup(gridLoc: string) {
         const cardGrid: object[] = [];
-
-        console.log("create card group");
-        console.log(gridLoc);
 
         const tempCardGroup: object[] = [];
 

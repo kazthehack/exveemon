@@ -95,23 +95,30 @@ export function onGetMonsterList(content: any): constants.IMonsterListResponseRe
 }
 
 export function onGetMessage(response: string): constants.ProxyActionType {
-    const tempJsonContent = JSON.parse(response);
+    try {
+        const tempJsonContent = JSON.parse(response);
 
-    if (tempJsonContent["resData"]["020001"]) {
-        return onGetPlayerInfo(tempJsonContent);
+        if (tempJsonContent["resData"]["020001"]) {
+            return onGetPlayerInfo(tempJsonContent);
+        }
+
+        if (tempJsonContent["resData"]["010401"]) {
+            return onGetDeckList(tempJsonContent);
+        }
+
+        if (tempJsonContent["resData"]["020101"]) {
+            return onGetMonsterList(tempJsonContent);
+        }
+    } catch {
+        // Ignore in error in parsing
     }
 
-    if (tempJsonContent["resData"]["010401"]) {
-        return onGetDeckList(tempJsonContent);
-    }
-
-    if (tempJsonContent["resData"]["020101"]) {
-        return onGetMonsterList(tempJsonContent);
-    } else {
-        return {
-            type: constants.ACTION_STATE.RECEIVE_USER_INFO_FAIL
-        };
-    }
+    return {
+        payload: {
+            message: response
+        },
+        type: constants.ACTION_STATE.RECEIVE_PASSTHROUGH
+    };
 }
 
 function getHostPortFromString(hostString: string, defaultPort: string) {
@@ -154,7 +161,7 @@ export function StartProxyServer(dispatch: Dispatch<constants.ProxyActionType>) 
             const proxy = httpProxy.createProxyServer({});
 
             proxy.on("error", (err: any, req: any, res: any) => {
-                console.log("proxy error", err);
+                dispatch(onGetMessage("PROXY ERROR: " + err.message));
                 res.end();
             });
 
@@ -184,12 +191,17 @@ export function StartProxyServer(dispatch: Dispatch<constants.ProxyActionType>) 
                         dispatch(onGetMonsterList(resJson));
                         res.end();
                     });
+                } else {
+                    dispatch(onGetMessage(req.url));
                 }
             });
 
             proxy.web(req, res, { target });
         })
-        .listen(2113); // this is the port your clients will connect to
+        .listen(2113)
+        .on("error", (err: any, req: any, res: any) => {
+            dispatch(onGetMessage("PROXY ERROR: " + err.message));
+        });
 
     server.addListener("connect", (req: any, socket: any, bodyhead: any) => {
         const hostPort = getHostPortFromString(req.url, "443");
@@ -197,6 +209,8 @@ export function StartProxyServer(dispatch: Dispatch<constants.ProxyActionType>) 
         const port = parseInt(hostPort[1], 10);
         console.log("Proxying HTTPS request for:", hostDomain, port, hostPort);
         console.log(req);
+
+        dispatch(onGetMessage(hostDomain));
 
         const proxySocket = new net.Socket();
 

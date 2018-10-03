@@ -172,9 +172,7 @@ export function ReadFile(dispatch: Dispatch<proxyConstants.ProxyActionType>) {
         console.log(e);
     }
 
-    console.log(fileContent);
-    console.log(jsonFileContent);
-
+    
     dispatch(proxyActions.onGetDeckList(jsonFileContent));
     dispatch(proxyActions.onGetMonsterList(jsonFileContent));
     dispatch(proxyActions.onGetPlayerInfo(jsonFileContent));

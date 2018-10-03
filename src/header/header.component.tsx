@@ -6,7 +6,7 @@ import * as types from "./header.types";
 
 import { withRouter } from "react-router";
 
-import { Button, Dropdown, Grid, Header, Icon, Image, Label, Segment } from "semantic-ui-react";
+import { Button, Dropdown } from "semantic-ui-react";
 
 import "./header.styles.css";
 
@@ -21,7 +21,7 @@ export class HeaderView extends React.Component<types.IHeaderProps, types.IHeade
             isShowLS: false,
             isShowLegacy: false,
             isShowLink: false,
-            sort: types.SORT.NEW
+            sort: types.SORT.EVOL
         },
         headerDescription: "",
         headerIcon: "",
@@ -111,30 +111,32 @@ export class HeaderView extends React.Component<types.IHeaderProps, types.IHeade
     }
 
     public componentWillReceiveProps(nextProps: any) {
-        console.log("header received props");
-        console.log(nextProps);
         this.setState({ config: nextProps.config, isDirty: false });
     }
 
     public handleFilterChange(event: any, data: object) {
-        this.setState({
-            config: Object.assign({}, this.state.config, {
-                filter: data["value"]
-            }),
-            isDirty: true
-        });
-
         if (data["value"] === types.FILTER.WITH_MEDALS) {
             this.setState({
                 config: Object.assign({}, this.state.config, {
+                    filter: data["value"],
                     isMedalView: true
-                })
+                }),
+                isDirty: true
             });
         } else if (data["value"] === types.FILTER.WITH_LEADER) {
             this.setState({
                 config: Object.assign({}, this.state.config, {
+                    filter: data["value"],
                     isShowLS: true
-                })
+                }),
+                isDirty: true
+            });
+        } else {
+            this.setState({
+                config: Object.assign({}, this.state.config, {
+                    filter: data["value"]
+                }),
+                isDirty: true
             });
         }
     }
@@ -144,7 +146,6 @@ export class HeaderView extends React.Component<types.IHeaderProps, types.IHeade
             config: Object.assign({}, this.state.config, {
                 sort: data["value"]
             }),
-
             isDirty: true
         });
     }
@@ -167,6 +168,7 @@ export class HeaderView extends React.Component<types.IHeaderProps, types.IHeade
                     selection
                     options={types.FilterOptions}
                     onChange={this.handleFilterChange}
+                    value={this.state.config.filter}
                 />
             </Button>
         );
@@ -180,6 +182,7 @@ export class HeaderView extends React.Component<types.IHeaderProps, types.IHeade
                     selection
                     options={types.SortOptions}
                     onChange={this.handleSortChange}
+                    value={this.state.config.sort}
                 />
             </Button>
         );

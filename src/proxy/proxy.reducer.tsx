@@ -10,6 +10,7 @@ export function ProxyReducer(
     if (state == null) {
         state = {
             deckList: [],
+            message: "",
             playerInfo: {
                 leadMonsterId: "",
                 nickname: "",
@@ -32,6 +33,10 @@ export function ProxyReducer(
         case constants.ACTION_STATE.RECEIVE_MONSTER_LIST_SUCCESS:
             return Object.assign({}, state, {
                 userMonsterList: action.payload.userMonsterList
+            });
+        case constants.ACTION_STATE.RECEIVE_PASSTHROUGH:
+            return Object.assign({}, state, {
+                message: action.payload.message
             });
         default:
             return state;

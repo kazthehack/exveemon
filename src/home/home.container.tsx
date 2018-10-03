@@ -18,6 +18,7 @@ export function mapStateToProps({ user, parser }: IRootState) {
         {},
         {
             deckList: user.deckList,
+            message: user.message,
             monsterData: parser.monsterData,
             monsterEvolutionRoutes: parser.evolutionRoutes,
             monsterInfo: parser.monsterInfo,

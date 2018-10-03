@@ -28,9 +28,7 @@ export function HeaderReducer(
         };
         return state;
     }
-    console.log("header reducer received new items");
-    console.log(action);
-
+    
     switch (action.type) {
         case constants.ACTION_STATE.SET_CONFIG_SUCCESS:
             return Object.assign({}, state, {

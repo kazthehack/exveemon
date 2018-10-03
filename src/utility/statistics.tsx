@@ -11,10 +11,6 @@ export function ObtainHouseCount(
 ) {
     const tempMonsterList: types.IMonster[] = [];
 
-    console.log("Statistic:");
-    console.log(monsterInfo);
-    console.log(monsterData);
-
     for (let i = 9; i >= 4; i--) {
         let tempGroup = [];
 
