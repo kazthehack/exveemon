@@ -22,10 +22,12 @@ export interface IHomeState {
     deckList: types.IDeck[];
     houseCount: number;
     labCount: number;
+    message: string;
     monsterEvolutionRoutes: types.IEvolutionRoute[];
     monsterInfo: types.IMonsterInfo[];
     monsterData: types.IMonsterData[];
     monsterSkills: types.IMonsterSkill[];
+    networkAddresses: object[];
     rootResourcePath: string;
     playerInfo: types.IPlayerInfo;
     userMonsterList: types.IMonster[];

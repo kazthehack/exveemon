@@ -16,7 +16,7 @@ import * as data from "../common/data.types";
 
 import "./grid.styles.css";
 
-import { Card, Divider, Grid, Header, Icon, Image, Label, Segment } from "semantic-ui-react";
+import { Card, Divider, Grid, Icon, Image, Label, Segment } from "semantic-ui-react";
 
 export class GridView extends React.Component<types.IGridProps, types.IGridState> {
     public htmlContentScrollRef: any;
@@ -120,23 +120,17 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
     }
 
     public componentWillReceiveProps(nextProps: any) {
-        if (!nextProps.gridLoc) {
-            // Reset if gridLoc is undefined
-            this.setState({ location: "" });
-        } else if (this.state.location !== nextProps.gridLoc) {
-            this.createCardGroup(nextProps.gridLoc);
-            this.setState({ location: nextProps.location });
-        }
-
+        
         let isForUpdate = false;
 
-        if (this.state.config !== nextProps.config) {
+        if (this.state.config !== nextProps.config || this.state.location !== nextProps.gridLoc) {
             isForUpdate = true;
         }
 
         this.setState({
             config: nextProps.config,
             isDirty: isForUpdate,
+            location: nextProps.gridLoc,
             monsterData: nextProps.monsterData,
             monsterEvolutionRoutes: nextProps.monsterEvolutionRoutes,
             monsterInfo: nextProps.monsterInfo,
