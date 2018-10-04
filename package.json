@@ -1,6 +1,6 @@
 {
     "name": "exveemon",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "private": true,
     "dependencies": {
         "@types/electron": "^1.6.10",
@@ -40,9 +40,10 @@
         "semantic-clean": "cd semantic & gulp clean",
         "electron": "react-scripts-ts build & electron .",
         "electron-pack-clean": "cd dist & rmdir /s /q linux & rmdir /s /q win & cd .. ",
-        "electron-pack-windows": "electron-packager . \"Exveemon\" --out=dist/win --platform=win32 --overwrite --arch=ia32 --electron-version=2.0.8 --icon=public/resources/logo.ico --ignore=dist --ignore=src  --ignore=README.md --ignore=.gitignore",
-        "electron-pack-linux": "electron-packager . \"Exveemon\" --out=dist/linux --platform=linux --overwrite --arch=x64 --electron-version=2.0.8 --icon=public/resources/logo.ico --ignore=dist --ignore=src --ignore=README.md --ignore=.gitignore",
-        "electron-pack-mac": "electron-packager . \"Exveemon\" --out=dist/mac --platform=darwin --overwrite --arch=x64 --electron-version=2.0.8 --icon=public/resources/logo.icns --ignore=dist --ignore=src --ignore=README.md --ignore=.gitignore",
+        "electron-pack-windows": "npm run-script electron-pack-clean & npm run-script build & electron-packager . \"Exveemon\" --out=dist/win --platform=win32 --overwrite --arch=ia32 --electron-version=2.0.8 --icon=public/resources/logo.ico --ignore=dist --ignore=README.md --ignore=.gitignore",
+        "electron-pack-windows-debug": "npm run-script electron-pack-clean & npm run-script build & electron-packager . \"Exveemon\" --out=dist/win --platform=win32 --overwrite --arch=ia32 --electron-version=2.0.8 --icon=public/resources/logo.ico --ignore=dist  --ignore=README.md --ignore=.gitignore",
+        "electron-pack-linux": "electron-packager . \"Exveemon\" --out=dist/linux --platform=linux --overwrite --arch=x64 --electron-version=2.0.8 --icon=public/resources/logo.ico --ignore=dist --ignore=README.md --ignore=.gitignore",
+        "electron-pack-mac": "electron-packager . \"Exveemon\" --out=dist/mac --platform=darwin --overwrite --arch=x64 --electron-version=2.0.8 --icon=public/resources/logo.icns --ignore=dist --ignore=README.md --ignore=.gitignore",
         "electron-pack-all": "npm run-script electron-pack-clean & npm run-script build & npm run-script electron-pack-windows & npm run-script electron-pack-linux"
     },
     "devDependencies": {
