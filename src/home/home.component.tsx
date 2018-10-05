@@ -36,6 +36,7 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
         deckList: [],
         houseCount: 0,
         isLoading: false,
+        isSaved: false,
         labCount: 0,
         message: "",
         monsterData: [],
@@ -88,10 +89,9 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
 
         for (const ifs of Object.keys(networks)) {
             const tempIpAddress = networks[ifs].find((m: any) => m.family === "IPv4");
-            
+
             // Ignore local IP Addresses
-            if (tempIpAddress.address === "127.0.0.1")
-            {
+            if (tempIpAddress.address === "127.0.0.1") {
                 continue;
             }
 
@@ -193,6 +193,8 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
             this.state.playerInfo,
             this.state.deckList
         );
+
+        this.setState({ isSaved: true });
     }
 
     public render() {
@@ -231,7 +233,6 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
                                         >
                                             Load User Data
                                         </Button>
-
                                         <Button
                                             fluid
                                             size="medium"
@@ -273,8 +274,14 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
                                         </Grid>
                                     </Card.Content>
                                     <Card.Content extra>
-                                        <Button fluid onClick={this.handleWriteUserInfo}>
-                                            Save User Information
+                                        <Button
+                                            fluid
+                                            onClick={this.handleWriteUserInfo}
+                                            color={this.state.isSaved ? "green" : undefined}
+                                        >
+                                            {this.state.isSaved
+                                                ? "User Data Saved"
+                                                : "Save User Data"}
                                         </Button>
                                     </Card.Content>
                                 </Card>

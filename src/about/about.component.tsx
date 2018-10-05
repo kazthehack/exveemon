@@ -8,7 +8,7 @@ import "react-perfect-scrollbar/dist/css/styles.css";
 
 import { withRouter } from "react-router";
 
-import { Button, Divider, Header, Icon, Label, Segment } from "semantic-ui-react";
+import { Divider, Header, Icon, Label, Segment } from "semantic-ui-react";
 
 import "./about.styles.css";
 

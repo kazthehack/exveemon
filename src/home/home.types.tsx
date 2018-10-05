@@ -19,6 +19,7 @@ export interface IHomeProps {
 
 export interface IHomeState {
     isLoading: boolean;
+    isSaved: boolean;
     deckList: types.IDeck[];
     houseCount: number;
     labCount: number;
