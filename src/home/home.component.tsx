@@ -90,6 +90,18 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
         for (const ifs of Object.keys(networks)) {
             const tempIpAddress = networks[ifs].find((m: any) => m.family === "IPv4");
 
+            console.log(tempIpAddress);
+
+            // Check and IPv4 is found
+            if (!tempIpAddress) {
+                continue;
+            }
+
+            // Ignore if address is undefined
+            if (!tempIpAddress.address) {
+                continue;
+            }
+
             // Ignore local IP Addresses
             if (tempIpAddress.address === "127.0.0.1") {
                 continue;
@@ -101,6 +113,10 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
                     :2113
                 </p>
             );
+        }
+
+        if (ipAddresses.length === 0) {
+            ipAddresses.push(<p>Cannot load IP Address, please check manually.</p>);
         }
 
         this.setState({
