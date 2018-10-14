@@ -123,25 +123,38 @@ export function ObtainLegacySkill(userMonsterId: string, userMonsterList: types.
 export function ObtainChortosLink(monsterId: string, monsterData: types.IMonsterData[]) {
     const BASE_URL = "https://chortos.selfip.net/digimonlinks/monsters/";
 
-    const group = monsterData.find(m => m.monsterId === monsterId);
+    const monster = monsterData.find(m => m.monsterId === monsterId);
 
-    if (!group) {
+    if (!monster) {
         return "";
     }
 
-    return BASE_URL + group.monsterGroupId;
+    const group = monsterInfo.find(m => m.monsterGroupId === monster.monsterGroupId);
+
+    if (!group || group.monsterCollectionId === "0" || group.monsterCollectionId.length !== 5) {
+        return BASE_URL + monster.monsterGroupId;
+    } else {
+        return BASE_URL + parseInt(group.monsterCollectionId.substring(1));
+    }
 }
 
 export function ObtainTakatomonLink(monsterId: string, monsterData: types.IMonsterData[]) {
     const BASE_URL = "https://takatomon.net/?sd=";
 
-    const group = monsterData.find(m => m.monsterId === monsterId);
+    const monster = monsterData.find(m => m.monsterId === monsterId);
 
-    if (!group) {
+    if (!monster) {
         return "";
     }
 
-    return BASE_URL + group.monsterGroupId;
+    const group = monsterInfo.find(m => m.monsterGroupId === monster.monsterGroupId);
+
+    // Exclude mutants
+    if (!group || group.monsterCollectionId === "0" || group.monsterCollectionId.length !== 5) {
+        return "";
+    }
+
+    return BASE_URL + parseInt(group.monsterCollectionId.substring(1));
 }
 
 export function ObtainEvolutionInformation(
