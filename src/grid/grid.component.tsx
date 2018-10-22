@@ -251,6 +251,22 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
         return tempMonsterList;
     }
 
+    private applyNoMedalFilter(monsterList: data.IMonster[]): data.IMonster[] {
+        let tempMonsterList: data.IMonster[] = [];
+
+        tempMonsterList = monsterList.filter(
+            m =>
+                m.attackAbilityFlg === "0" &&
+                m.spAttackAbilityFlg === "0" && 
+                m.defenseAbilityFlg === "0" &&
+                m.spDefenseAbilityFlg === "0" &&
+                m.hpAbilityFlg === "0" &&
+                m.speedAbilityFlg === "0"
+        );
+
+        return tempMonsterList;
+    }
+
     private applyLeaderFilter(monsterList: data.IMonster[]): data.IMonster[] {
         let tempMonsterList: data.IMonster[] = [];
 
@@ -353,6 +369,9 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
             tempMonsterList = this.applyLeaderFilter(tempMonsterList);
         } else if (this.state.config.filter === headerTypes.FILTER.WITH_MEDALS) {
             tempMonsterList = this.applyMedalFilter(tempMonsterList);
+        } else if(this.state.config.filter === headerTypes.FILTER.NO_MEDALS)
+        {
+            tempMonsterList = this.applyNoMedalFilter(tempMonsterList);
         }
 
         // Apply Sort

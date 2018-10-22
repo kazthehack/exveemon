@@ -1,6 +1,7 @@
 export enum FILTER {
     WITH_MEDALS,
     WITH_LEADER,
+    NO_MEDALS,
     NO_FILTER
 }
 
@@ -26,6 +27,11 @@ export const FilterOptions = [
         key: FILTER.WITH_LEADER,
         text: "With Leader",
         value: FILTER.WITH_LEADER
+    },
+    {
+        key: FILTER.NO_MEDALS,
+        text: "No Medals",
+        value: FILTER.NO_MEDALS
     }
 ];
 
