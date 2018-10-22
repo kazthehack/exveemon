@@ -1,6 +1,21 @@
 {
     "changeLog": [
         {
+            "header": "1.0.2 Update",
+            "content": "- Updated monster database \n - Added no medal filter",
+            "version": "1.0.2"
+        },
+        {
+            "header": "1.0.1 Hot Fixes",
+            "content": "- Added more error handling on OS.Networks to handle other networks. Ignores, network if cannot be found.",
+            "version": "1.0.1"
+        },
+        {
+            "header": "1.0.0 Release",
+            "content": "- Updated Proxy Capture Messages \n - Implemented Sort/Filtering \n - Implemented Leader/Legacy/Evolution/Details Links \n - Implemented dynamic changelogs",
+            "version": "1.0.0"
+        },
+        {
             "header": "0.1.0 Beta hotfixes",
             "content": "- Fixed icons for mutants and V2s \n - Fixed Rookie and DNA viewer bugs \n - Multiple aesthetic changes ",
             "version": "0.1.1"
