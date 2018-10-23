@@ -2,7 +2,7 @@
     "changeLog": [
         {
             "header": "1.0.2 Update",
-            "content": "- Updated monster database \n - Added no medal filter",
+            "content": "- Updated monster database \n - Added no medal filter \n - Fixed Chortos/Takatomon links based on merge request of Chortos",
             "version": "1.0.2"
         },
         {

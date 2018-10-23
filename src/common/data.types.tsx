@@ -7,6 +7,7 @@ export interface IEvolutionRoute {
 
 export interface IMonsterInfo {
     modelId: string;
+    monsterCollectionId: string; 
     monsterGroupId: string;
     monsterName: string;
     growStep: string;

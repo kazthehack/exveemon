@@ -117,6 +117,7 @@ export function ReadMonsterInfo(rootResourcePath: string): constants.IReadMonste
         const tempMonsterInfo = {
             growStep: monsterData["growStep"],
             modelId: monsterData["modelId"],
+            monsterCollectionId: monsterData["monsterCollectionId"],
             monsterGroupId: monsterData["monsterGroupId"],
             monsterName: monsterData["monsterName"]
         };
@@ -172,7 +173,6 @@ export function ReadFile(dispatch: Dispatch<proxyConstants.ProxyActionType>) {
         console.log(e);
     }
 
-    
     dispatch(proxyActions.onGetDeckList(jsonFileContent));
     dispatch(proxyActions.onGetMonsterList(jsonFileContent));
     dispatch(proxyActions.onGetPlayerInfo(jsonFileContent));

@@ -120,7 +120,11 @@ export function ObtainLegacySkill(userMonsterId: string, userMonsterList: types.
     return monster.commonSkillId;
 }
 
-export function ObtainChortosLink(monsterId: string, monsterData: types.IMonsterData[]) {
+export function ObtainChortosLink(
+    monsterId: string,
+    monsterData: types.IMonsterData[],
+    monsterInfo: types.IMonsterInfo[]
+) {
     const BASE_URL = "https://chortos.selfip.net/digimonlinks/monsters/";
 
     const monster = monsterData.find(m => m.monsterId === monsterId);
@@ -134,11 +138,15 @@ export function ObtainChortosLink(monsterId: string, monsterData: types.IMonster
     if (!group || group.monsterCollectionId === "0" || group.monsterCollectionId.length !== 5) {
         return BASE_URL + monster.monsterGroupId;
     } else {
-        return BASE_URL + parseInt(group.monsterCollectionId.substring(1));
+        return BASE_URL + parseInt(group.monsterCollectionId.substring(1), 10).toString();
     }
 }
 
-export function ObtainTakatomonLink(monsterId: string, monsterData: types.IMonsterData[]) {
+export function ObtainTakatomonLink(
+    monsterId: string,
+    monsterData: types.IMonsterData[],
+    monsterInfo: types.IMonsterInfo[]
+) {
     const BASE_URL = "https://takatomon.net/?sd=";
 
     const monster = monsterData.find(m => m.monsterId === monsterId);
@@ -154,7 +162,7 @@ export function ObtainTakatomonLink(monsterId: string, monsterData: types.IMonst
         return "";
     }
 
-    return BASE_URL + parseInt(group.monsterCollectionId.substring(1));
+    return BASE_URL + parseInt(group.monsterCollectionId.substring(1), 10).toString();
 }
 
 export function ObtainEvolutionInformation(

@@ -52,6 +52,8 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
         this.resizeFn = props.resizeFn;
         this.openBrwsrFn = props.openBrwsrFn;
 
+        this.createLinkButton = this.createLinkButton.bind(this);
+
         this.obtainMonsterSkillName = this.obtainMonsterSkillName.bind(this);
         this.obtainMonsterLeaderSkill = this.obtainMonsterLeaderSkill.bind(this);
         this.obtainMonsterLegacySkill = this.obtainMonsterLegacySkill.bind(this);
@@ -109,7 +111,6 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
     }
 
     public componentWillReceiveProps(nextProps: types.IDeckProps) {
-
         let isForUpdate = false;
 
         if (this.state.config !== nextProps.config) {
@@ -177,11 +178,48 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
     }
 
     public obtainDetailsLink(monsterId: string) {
-        return resourceLoader.ObtainChortosLink(monsterId, this.state.monsterData);
+        return resourceLoader.ObtainChortosLink(
+            monsterId,
+            this.state.monsterData,
+            this.state.monsterInfo
+        );
     }
 
     public obtainEvolutionLink(monsterId: string) {
-        return resourceLoader.ObtainTakatomonLink(monsterId, this.state.monsterData);
+        return resourceLoader.ObtainTakatomonLink(
+            monsterId,
+            this.state.monsterData,
+            this.state.monsterInfo
+        );
+    }
+
+    public createLinkButton(urlFunc: any, imgUrl: string, labelString: string, identifier: string) {
+        const tempUrl = urlFunc(identifier);
+
+        if (tempUrl !== "") {
+            return (
+                <Card.Content extra>
+                    <Label
+                        as="a"
+                        image
+                        onClick={() => {
+                            this.openBrwsrFn(tempUrl);
+                        }}
+                        size="medium"
+                    >
+                        <img src={imgUrl} /> {labelString}
+                    </Label>
+                </Card.Content>
+            );
+        } else {
+            return (
+                <Card.Content extra>
+                    <Label as="a" image size="medium">
+                        <img src={imgUrl} /> N/A
+                    </Label>
+                </Card.Content>
+            );
+        }
     }
 
     private createCardGroup() {
@@ -251,50 +289,22 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
                         ) : (
                             ""
                         )}
-                        {this.state.config.isShowEvolution ? (
-                            <Card.Content extra>
-                                <Label
-                                    as="a"
-                                    image
-                                    onClick={() => {
-                                        this.openBrwsrFn(
-                                            this.obtainEvolutionLink(
-                                                this.obtaineMonsterIdFromUserMonId(
-                                                    monCard.userMonsterId
-                                                )
-                                            )
-                                        );
-                                    }}
-                                    size="medium"
-                                >
-                                    <img src="./resources/takatomon.png" /> Takatomon
-                                </Label>
-                            </Card.Content>
-                        ) : (
-                            ""
-                        )}
-                        {this.state.config.isShowLink ? (
-                            <Card.Content extra>
-                                <Label
-                                    as="a"
-                                    image
-                                    onClick={() => {
-                                        this.openBrwsrFn(
-                                            this.obtainDetailsLink(
-                                                this.obtaineMonsterIdFromUserMonId(
-                                                    monCard.userMonsterId
-                                                )
-                                            )
-                                        );
-                                    }}
-                                    size="medium"
-                                >
-                                    <img src="./resources/av_l.jpg" /> Chortos-2
-                                </Label>
-                            </Card.Content>
-                        ) : (
-                            ""
-                        )}
+                        {this.state.config.isShowEvolution
+                            ? this.createLinkButton(
+                                  this.obtainEvolutionLink,
+                                  "./resources/takatomon.png",
+                                  "Takatomon",
+                                  this.obtaineMonsterIdFromUserMonId(monCard.userMonsterId)
+                              )
+                            : ""}
+                        {this.state.config.isShowLink
+                            ? this.createLinkButton(
+                                  this.obtainDetailsLink,
+                                  "./resources/av_l.jpg",
+                                  "Chortos-2",
+                                  this.obtaineMonsterIdFromUserMonId(monCard.userMonsterId)
+                              )
+                            : ""}
                     </Card>
                 );
             }

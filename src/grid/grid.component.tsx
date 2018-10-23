@@ -66,6 +66,8 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
         this.ATOI = this.ATOI.bind(this);
         this.obtainEvolutionId = this.obtainEvolutionId.bind(this);
 
+        this.createLinkButton = this.createLinkButton.bind(this);
+
         this.resizeFn = props.resizeFn;
         this.openBrwsrFn = props.openBrwsrFn;
 
@@ -120,7 +122,6 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
     }
 
     public componentWillReceiveProps(nextProps: any) {
-        
         let isForUpdate = false;
 
         if (this.state.config !== nextProps.config || this.state.location !== nextProps.gridLoc) {
@@ -182,11 +183,19 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
     }
 
     public obtainDetailsLink(monsterId: string) {
-        return resourceLoader.ObtainChortosLink(monsterId, this.state.monsterData);
+        return resourceLoader.ObtainChortosLink(
+            monsterId,
+            this.state.monsterData,
+            this.state.monsterInfo
+        );
     }
 
     public obtainEvolutionLink(monsterId: string) {
-        return resourceLoader.ObtainTakatomonLink(monsterId, this.state.monsterData);
+        return resourceLoader.ObtainTakatomonLink(
+            monsterId,
+            this.state.monsterData,
+            this.state.monsterInfo
+        );
     }
 
     private applyHouseFilter(monsterList: data.IMonster[]): data.IMonster[] {
@@ -257,7 +266,7 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
         tempMonsterList = monsterList.filter(
             m =>
                 m.attackAbilityFlg === "0" &&
-                m.spAttackAbilityFlg === "0" && 
+                m.spAttackAbilityFlg === "0" &&
                 m.defenseAbilityFlg === "0" &&
                 m.spDefenseAbilityFlg === "0" &&
                 m.hpAbilityFlg === "0" &&
@@ -349,6 +358,40 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
         return tempMonsterList;
     }
 
+    private createLinkButton(
+        urlFunc: any,
+        imgUrl: string,
+        labelString: string,
+        identifier: string
+    ) {
+        const tempUrl = urlFunc(identifier);
+
+        if (tempUrl !== "") {
+            return (
+                <Card.Content extra>
+                    <Label
+                        as="a"
+                        image
+                        onClick={() => {
+                            this.openBrwsrFn(tempUrl);
+                        }}
+                        size="mini"
+                    >
+                        <img src={imgUrl} /> {labelString}
+                    </Label>
+                </Card.Content>
+            );
+        } else {
+            return (
+                <Card.Content extra>
+                    <Label as="a" image size="mini">
+                        <img src={imgUrl} /> N/A
+                    </Label>
+                </Card.Content>
+            );
+        }
+    }
+
     private createCardGroup(gridLoc: string) {
         const cardGrid: object[] = [];
 
@@ -369,8 +412,7 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
             tempMonsterList = this.applyLeaderFilter(tempMonsterList);
         } else if (this.state.config.filter === headerTypes.FILTER.WITH_MEDALS) {
             tempMonsterList = this.applyMedalFilter(tempMonsterList);
-        } else if(this.state.config.filter === headerTypes.FILTER.NO_MEDALS)
-        {
+        } else if (this.state.config.filter === headerTypes.FILTER.NO_MEDALS) {
             tempMonsterList = this.applyNoMedalFilter(tempMonsterList);
         }
 
@@ -431,38 +473,22 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
                     ) : (
                         ""
                     )}
-                    {this.state.config.isShowEvolution ? (
-                        <Card.Content extra>
-                            <Label
-                                as="a"
-                                image
-                                onClick={() => {
-                                    this.openBrwsrFn(this.obtainEvolutionLink(monster.monsterId));
-                                }}
-                                size="mini"
-                            >
-                                <img src="./resources/takatomon.png" /> Takatomon
-                            </Label>
-                        </Card.Content>
-                    ) : (
-                        ""
-                    )}
-                    {this.state.config.isShowLink ? (
-                        <Card.Content extra>
-                            <Label
-                                as="a"
-                                image
-                                onClick={() => {
-                                    this.openBrwsrFn(this.obtainDetailsLink(monster.monsterId));
-                                }}
-                                size="mini"
-                            >
-                                <img src="./resources/av_l.jpg" /> Chortos-2
-                            </Label>
-                        </Card.Content>
-                    ) : (
-                        ""
-                    )}
+                    {this.state.config.isShowEvolution
+                        ? this.createLinkButton(
+                              this.obtainEvolutionLink,
+                              "./resources/takatomon.png",
+                              "Takatomon",
+                              monster.monsterId
+                          )
+                        : ""}
+                    {this.state.config.isShowLink
+                        ? this.createLinkButton(
+                              this.obtainDetailsLink,
+                              "./resources/av_l.jpg",
+                              "Chortos-2",
+                              monster.monsterId
+                          )
+                        : ""}
                 </Card>
             );
         }
