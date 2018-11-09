@@ -1,12 +1,18 @@
 import * as types from "../common/data.types";
 
-export const MONSTER_DATA_PATH = "./build/resources/data/monsterData.json";
+export const RESOURCE_PATH = "./build/resources/data/";
 
-export const MONSTER_ROUTE_PATH = "./build/resources/data/monsterEvolutionRouter.json";
+export const JP_RESOURCE_PATH = "jp/";
 
-export const MONSTER_INFO_PATH = "./build/resources/data/monsterDataDetails.json";
+export const EN_RESOURCE_PATH = "en/";
 
-export const MONSTER_SKILL_PATH = "./build/resources/data/monsterSkill.json";
+export const MONSTER_DATA_PATH = "990102.json";
+
+export const MONSTER_ROUTE_PATH = "990110.json"; 
+
+export const MONSTER_INFO_PATH = "990103.json";
+
+export const MONSTER_SKILL_PATH = "990108.json";
 
 export const USER_INFO_PATH = "userInformation.json";
 

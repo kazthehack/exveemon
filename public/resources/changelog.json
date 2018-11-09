@@ -1,6 +1,11 @@
 {
     "changeLog": [
         {
+            "header": "1.1.0 Update",
+            "content": "- Added Support for JP Linkz \n - Modified proxy library from http-porxy to AnyProxy \n -Modified brotli and anyptoxy for electron compatibility \n - Fixed Preloading issue of CDNs for EN \n- Updated monster database for EN and JP \n ",
+            "version": "1.1.0"
+        },
+        {
             "header": "1.0.2 Update",
             "content": "- Updated monster database \n - Added no medal filter \n - Fixed Chortos/Takatomon links based on merge request of Chortos",
             "version": "1.0.2"

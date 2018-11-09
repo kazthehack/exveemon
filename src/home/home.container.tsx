@@ -33,15 +33,17 @@ export function mapDispatchToProps(
     dispatch: Dispatch<proxyConstants.ProxyActionType | parserConstants.ParserActionType>
 ) {
     return {
-        OnCaptureUserInfo: () => proxyActions.StartProxyServer(dispatch),
-        OnGetMonsterData: (rootResourcePath: string) =>
-            dispatch(parserActions.ReadMonsterData(rootResourcePath)),
-        OnGetMonsterDetails: (rootResourcePath: string) =>
-            dispatch(parserActions.ReadMonsterInfo(rootResourcePath)),
-        OnGetMonsterRoutes: (rootResourcePath: string) =>
-            dispatch(parserActions.ReadMonsterRoute(rootResourcePath)),
-        OnGetMonsterSkills: (rootResourcePath: string) =>
-            dispatch(parserActions.ReadMonsterSkill(rootResourcePath)),
+        OnCaptureHTTPSUserInfo: (local: string) =>
+            proxyActions.StartProxyHTTPSServer(dispatch, local),
+        OnCreateHTTPSCertificate: () => proxyActions.CreateHTTPSCertificate(),
+        OnGetMonsterData: (rootResourcePath: string, localResourcePath: string) =>
+            dispatch(parserActions.ReadMonsterData(rootResourcePath, localResourcePath)),
+        OnGetMonsterDetails: (rootResourcePath: string, localResourcePath: string) =>
+            dispatch(parserActions.ReadMonsterInfo(rootResourcePath, localResourcePath)),
+        OnGetMonsterRoutes: (rootResourcePath: string, localResourcePath: string) =>
+            dispatch(parserActions.ReadMonsterRoute(rootResourcePath, localResourcePath)),
+        OnGetMonsterSkills: (rootResourcePath: string, localResourcePath: string) =>
+            dispatch(parserActions.ReadMonsterSkill(rootResourcePath, localResourcePath)),
         OnReadUserInfo: () => parserActions.ReadFile(dispatch),
         OnWriteUserInfo: (userMonsterList: any, playerInfo: any, deckList: any) =>
             parserActions.WriteUserInfo(userMonsterList, playerInfo, deckList)

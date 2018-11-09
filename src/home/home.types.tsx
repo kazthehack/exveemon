@@ -8,11 +8,12 @@ export interface IHomeProps {
     monsterInfo: types.IMonsterInfo[];
     monsterData: types.IMonsterData[];
     monsterSkills: types.IMonsterSkill[];
-    OnCaptureUserInfo: () => void;
-    OnGetMonsterData: (rootResourcePath: string) => void;
-    OnGetMonsterDetails: (rootResourcePath: string) => void;
-    OnGetMonsterRoutes: (rootResourcePath: string) => void;
-    OnGetMonsterSkills: (rootResourcePath: string) => void;
+    OnCaptureHTTPSUserInfo: (local: string) => void;
+    OnCreateHTTPSCertificate: () => void;
+    OnGetMonsterData: (rootResourcePath: string, localResourcePath: string) => void;
+    OnGetMonsterDetails: (rootResourcePath: string, localResourcePath: string) => void;
+    OnGetMonsterRoutes: (rootResourcePath: string, localResourcePath: string) => void;
+    OnGetMonsterSkills: (rootResourcePath: string, localResourcePath: string) => void;
     OnReadUserInfo: () => void;
     OnWriteUserInfo: (userMonsterList: any, playerInfo: any, deckList: any) => void;
 }
@@ -21,6 +22,7 @@ export interface IHomeState {
     isLoading: boolean;
     isSaved: boolean;
     deckList: types.IDeck[];
+    hasCertificate: boolean;
     houseCount: number;
     labCount: number;
     message: string;

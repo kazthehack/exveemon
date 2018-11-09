@@ -9,9 +9,12 @@ import { withRouter } from "react-router";
 import * as resourceLoader from "../utility/resource_loader";
 import * as statisticsUtility from "../utility/statistics";
 
+const anyproxy = window.require("anyproxy");
 const os = window.require("os");
 
 import * as types from "./home.types";
+
+import * as parserConstants from "../parser/parser.constants";
 
 import {
     Button,
@@ -34,6 +37,7 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
 
     public state: types.IHomeState = {
         deckList: [],
+        hasCertificate: anyproxy.utils.certMgr.ifRootCAFileExists(),
         houseCount: 0,
         isLoading: false,
         isSaved: false,
@@ -55,10 +59,13 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
 
     constructor(props: any) {
         super(props);
-        this.handleCaptureUserInfo = this.handleCaptureUserInfo.bind(this);
+        this.handleCaptureHTTPUserInfo = this.handleCaptureHTTPUserInfo.bind(this);
+        this.handleCaptureHTTPSUserInfo = this.handleCaptureHTTPSUserInfo.bind(this);
+        this.handleCreateHTTPSCertificate = this.handleCreateHTTPSCertificate.bind(this);
 
         this.obtainMonsterIcon = this.obtainMonsterIcon.bind(this);
-        this.handleReadUserInfo = this.handleReadUserInfo.bind(this);
+        this.handleReadENUserInfo = this.handleReadENUserInfo.bind(this);
+        this.handleReadJPUserInfo = this.handleReadJPUserInfo.bind(this);
         this.handleWriteUserInfo = this.handleWriteUserInfo.bind(this);
         this.obtainNetworkAddresses = this.obtainNetworkAddresses.bind(this);
         // this.handleOpenBrowser.bind(this); this.resizeFn = props.resizeFn;
@@ -124,14 +131,33 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
         });
     }
 
-    public handleCaptureUserInfo() {
+    public handleCaptureHTTPUserInfo() {
         this.setState({ isLoading: true });
-        this.props.OnCaptureUserInfo();
+        this.loadResources(parserConstants.EN_RESOURCE_PATH);
+        this.props.OnCaptureHTTPSUserInfo(parserConstants.EN_RESOURCE_PATH);
+    }
+
+    public handleCaptureHTTPSUserInfo() {
+        this.setState({ isLoading: true });
+        this.loadResources(parserConstants.JP_RESOURCE_PATH);
+        this.props.OnCaptureHTTPSUserInfo(parserConstants.JP_RESOURCE_PATH);
+    }
+
+    public handleCreateHTTPSCertificate() {
+        this.setState({ hasCertificate: true });
+        this.props.OnCreateHTTPSCertificate();
     }
 
     public componentDidMount() {
         this.resizeFn();
         this.obtainNetworkAddresses();
+    }
+
+    public loadResources(localResourcePath: string) {
+        this.props.OnGetMonsterData(this.state.rootResourcePath, localResourcePath);
+        this.props.OnGetMonsterRoutes(this.state.rootResourcePath, localResourcePath);
+        this.props.OnGetMonsterDetails(this.state.rootResourcePath, localResourcePath);
+        this.props.OnGetMonsterSkills(this.state.rootResourcePath, localResourcePath);
     }
 
     public componentWillReceiveProps(nextProps: any) {
@@ -165,22 +191,6 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
     }
 
     public componentDidUpdate() {
-        if (this.state.monsterData.length === 0) {
-            this.props.OnGetMonsterData(this.state.rootResourcePath);
-        }
-
-        if (this.state.monsterEvolutionRoutes.length === 0) {
-            this.props.OnGetMonsterRoutes(this.state.rootResourcePath);
-        }
-
-        if (this.state.monsterInfo.length === 0) {
-            this.props.OnGetMonsterDetails(this.state.rootResourcePath);
-        }
-
-        if (this.state.monsterSkills.length === 0) {
-            this.props.OnGetMonsterSkills(this.state.rootResourcePath);
-        }
-
         if (
             this.state.isLoading &&
             this.state.playerInfo.userId !== "" &&
@@ -199,7 +209,13 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
         );
     }
 
-    public handleReadUserInfo() {
+    public handleReadENUserInfo() {
+        this.loadResources(parserConstants.EN_RESOURCE_PATH);
+        this.props.OnReadUserInfo();
+    }
+
+    public handleReadJPUserInfo() {
+        this.loadResources(parserConstants.JP_RESOURCE_PATH);
         this.props.OnReadUserInfo();
     }
 
@@ -226,40 +242,84 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
                             ) : (
                                 ""
                             )}
-                            {/* {this.getInterfaces()}
-                            :2116) */}
                         </Loader>
                     </Dimmer>
-                    <Grid centered>
-                        {this.state.playerInfo.userId === "" ? (
-                            <Grid.Column textAlign="center" width={6}>
+
+                    {this.state.playerInfo.userId === "" ? (
+                        <Grid centered>
+                            <Grid.Column textAlign="center" width={8}>
                                 <Segment>
                                     <Header as="h3" image>
-                                        <Image src="./resources/logo.png" />
                                         <Header.Content>
-                                            Get Your Account Information
+                                            <Image
+                                                src="./resources/logo_linkz_en.png"
+                                                fluid
+                                                size="small"
+                                            />
                                         </Header.Content>
                                     </Header>
                                     <Divider />
                                     <Form>
                                         <Button
+                                            fluid
+                                            size="medium"
+                                            onClick={this.handleCaptureHTTPUserInfo}
+                                        >
+                                            Capture DigimonLinks(EN)
+                                        </Button>
+
+                                        <Button
                                             size="medium"
                                             fluid
-                                            onClick={this.handleReadUserInfo}
+                                            onClick={this.handleReadENUserInfo}
                                         >
                                             Load User Data
-                                        </Button>
-                                        <Button
-                                            fluid
-                                            size="medium"
-                                            onClick={this.handleCaptureUserInfo}
-                                        >
-                                            Capture User Data
                                         </Button>
                                     </Form>
                                 </Segment>
                             </Grid.Column>
-                        ) : (
+                            <Grid.Column textAlign="center" width={8}>
+                                <Segment>
+                                    <Header as="h3" image>
+                                        <Header.Content>
+                                            {" "}
+                                            <Image
+                                                src="./resources/logo_linkz_jp.png"
+                                                fluid
+                                                size="small"
+                                            />
+                                        </Header.Content>
+                                    </Header>
+                                    <Divider />
+                                    <Form>
+                                        <Button
+                                            fluid
+                                            size="medium"
+                                            color={this.state.hasCertificate ? "green" : undefined}
+                                            onClick={this.handleCreateHTTPSCertificate}
+                                        >
+                                            Generate Certificate
+                                        </Button>
+                                        <Button
+                                            fluid
+                                            size="medium"
+                                            onClick={this.handleCaptureHTTPSUserInfo}
+                                        >
+                                            Capture DigimonLinkz(JP)
+                                        </Button>
+                                        <Button
+                                            size="medium"
+                                            fluid
+                                            onClick={this.handleReadJPUserInfo}
+                                        >
+                                            Load User Data
+                                        </Button>
+                                    </Form>
+                                </Segment>
+                            </Grid.Column>
+                        </Grid>
+                    ) : (
+                        <Grid centered>
                             <Grid.Column width={6}>
                                 <Card>
                                     <Card.Content>
@@ -302,8 +362,8 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
                                     </Card.Content>
                                 </Card>
                             </Grid.Column>
-                        )}
-                    </Grid>
+                        </Grid>
+                    )}
                 </Dimmer.Dimmable>
             </div>
         );

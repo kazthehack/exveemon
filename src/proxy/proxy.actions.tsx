@@ -4,14 +4,15 @@ const net = window.require("net");
 const httpProxy = window.require("http-proxy");
 const url = window.require("url");
 
-import * as zlib from "zlib";
+/* HTTPS Support */
+const AnyProxy = window.require("anyproxy");
+const https = window.require("https");
+const fs = window.require("fs");
 
 import { Dispatch } from "redux";
 
 import * as types from "../common/data.types";
 import * as constants from "./proxy.constants";
-
-const regexHostPort = /^([^:]+)(:([0-9]+))?$/;
 
 export function onGetPlayerInfo(content: any): constants.IPlayerInfoResponseResult {
     const tempUserJson = content["resData"]["020001"];
@@ -121,180 +122,108 @@ export function onGetMessage(response: string): constants.ProxyActionType {
     };
 }
 
-function getHostPortFromString(hostString: string, defaultPort: string) {
-    let host = hostString;
-    let port = defaultPort;
+let proxyServer: any;
 
-    const result = regexHostPort.exec(hostString);
-    if (result != null) {
-        host = result[1];
-        if (result[2] != null) {
-            port = result[3];
+export function StartProxyHTTPSServer(
+    dispatch: Dispatch<constants.ProxyActionType>,
+    local: string
+) {
+    // HTTPS Support
+
+    const callbackFns = {
+        summary: "Exveemon Custom Rule",
+        *beforeSendResponse(requestDetail: any, responseDetail: any): any {
+            if (
+                requestDetail.url.indexOf("https://api.digimonlinkz.channel.or.jp") === 0 ||
+                requestDetail.url.indexOf("http://api.digimonlinkzww.channel.or.jp") === 0
+            ) {
+                try {
+                    const tempJsonContent = JSON.parse(responseDetail.response.body);
+
+                    if (
+                        tempJsonContent["resData"]["020001"] ||
+                        tempJsonContent["resData"]["010401"] ||
+                        tempJsonContent["resData"]["020101"]
+                    ) {
+                        dispatch(onGetMessage(responseDetail.response.body));
+                        //  return onGetPlayerInfo(tempJsonContent);
+                    } else {
+                        console.log("Passthrough Response:");
+                        console.log(tempJsonContent);
+                    }
+                } catch {
+                    console.log("JSON Parsing error");
+                }
+            }
+        },
+        *onError(requestDetail: any, error: any): any {
+            console.log(error);
+        },
+        *onConnectError(requestDetail: any, error: any): any {
+            console.log(error);
         }
+        // *beforeSendRequest(requestDetail) { /* ... */ },
+        // *beforeDealHttpsRequest(requestDetail) { /* ... */ },
+    };
+
+    let options;
+    if (local === "en/") {
+        options = {
+            port: 2113,
+            rule: callbackFns,
+            silent: false,
+            throttle: 10000,
+            webInterface: {
+                enable: true,
+                webPort: 2114
+            },
+            wsIntercept: false
+        };
+    } else {
+        /* JP HTTPS version*/
+        options = {
+            dangerouslyIgnoreUnauthorized: true,
+            forceProxyHttps: true,
+            port: 2113,
+            rule: callbackFns,
+            silent: false,
+            throttle: 10000,
+            webInterface: {
+                enable: true,
+                webPort: 2114
+            },
+            wsIntercept: false
+        };
     }
 
-    return [host, port];
-}
+    proxyServer = new AnyProxy.ProxyServer(options);
 
-export let server: any;
-
-export function StopProxyServer() {
-    server.close();
-}
-
-export function StartProxyServer(dispatch: Dispatch<constants.ProxyActionType>) {
-    http.globalAgent = new http.Agent({
-        family: 4
+    proxyServer.on("ready", () => {
+        /* */
     });
 
-    server = http
-        .createServer((req: any, res: any) => {
-            // Check if url exists.
-            if (!req.url) {
-                res.end();
-                return;
+    proxyServer.on("error", (e: any) => {
+        console.log(e);
+    });
+
+    proxyServer.start();
+}
+
+export function StopHTTPSServer() {
+    // proxyServer.close();
+}
+
+export function CreateHTTPSCertificate() {
+    // Create certificate
+    if (!AnyProxy.utils.certMgr.ifRootCAFileExists()) {
+        AnyProxy.utils.certMgr.generateRootCA((error: any, keyPath: any) => {
+            console.log(keyPath);
+
+            // let users to trust this CA before using proxy
+            if (error) {
+                console.log("error when generating rootCA");
+                console.log(error);
             }
-
-            const urlObj = url.parse(req.url);
-            const target = urlObj.protocol + "//" + urlObj.host;
-
-            const proxy = httpProxy.createProxyServer({});
-
-            proxy.on("error", (err: any, req: any, res: any) => {
-                dispatch(onGetMessage("PROXY ERROR: " + err.message));
-                res.end();
-            });
-
-            proxy.on("proxyRes", (proxyRes: any, req: any, res: any) => {
-                if (req.url === "http://api.digimonlinkzww.channel.or.jp/app/ActiveController") {
-                    let body = new Buffer("");
-                    proxyRes.on("data", (data: any) => {
-                        const dataBuffer = Buffer.from(data);
-                        body = Buffer.concat([body, dataBuffer]);
-                    });
-                    proxyRes.on("end", () => {
-                        zlib.gunzip(body, (err, dezipped) => {
-                            dispatch(onGetMessage(dezipped.toString()));
-                        });
-                        res.end();
-                    });
-                } else if (req.url === "http://127.0.0.1:2306/userinfo") {
-                    let body = new Buffer("");
-                    proxyRes.on("data", (data: any) => {
-                        const dataBuffer = Buffer.from(data);
-                        body = Buffer.concat([body, dataBuffer]);
-                    });
-                    proxyRes.on("end", () => {
-                        const resJson = JSON.parse(body.toString("utf8"));
-                        dispatch(onGetPlayerInfo(resJson));
-                        dispatch(onGetDeckList(resJson));
-                        dispatch(onGetMonsterList(resJson));
-                        res.end();
-                    });
-                } else {
-                    dispatch(onGetMessage(req.url));
-                }
-            });
-
-            proxy.web(req, res, { target });
-        })
-        .listen(2113)
-        .on("error", (err: any, req: any, res: any) => {
-            dispatch(onGetMessage("PROXY ERROR: " + err.message));
         });
-
-    server.addListener("connect", (req: any, socket: any, bodyhead: any) => {
-        const hostPort = getHostPortFromString(req.url, "443");
-        const hostDomain = hostPort[0];
-        const port = parseInt(hostPort[1], 10);
-        console.log("Proxying HTTPS request for:", hostDomain, port, hostPort);
-        console.log(req);
-
-        dispatch(onGetMessage(hostDomain));
-
-        const proxySocket = new net.Socket();
-
-        if (hostDomain === "api.digimonlinkzww.channel.or.jp") {
-            proxySocket.connect(
-                port,
-                hostDomain,
-                () => {
-                    proxySocket.write(bodyhead);
-                    socket.write("HTTP/" + req.httpVersion + " 200 Connection established\r\n\r\n");
-                }
-            );
-
-            let body = new Buffer("");
-
-            proxySocket.on("data", (chunk: any) => {
-                const dataBuffer = Buffer.from(chunk);
-                body = Buffer.concat([body, dataBuffer]);
-                socket.write(chunk);
-            });
-
-            proxySocket.on("end", () => {
-                zlib.gunzip(body, (err, dezipped) => {
-                    if (err) {
-                        console.log(err);
-                        console.log(body);
-                    }
-
-                    console.log(dezipped.toString());
-                });
-                socket.end();
-            });
-
-            proxySocket.on("error", () => {
-                socket.write("HTTP/" + req.httpVersion + " 500 Connection error\r\n\r\n");
-                socket.end();
-            });
-
-            socket.on("data", (chunk: any) => {
-                proxySocket.write(chunk);
-            });
-
-            socket.on("end", () => {
-                proxySocket.end();
-            });
-
-            socket.on("error", () => {
-                proxySocket.end();
-            });
-        } else {
-            // Passthrough requests
-            proxySocket.connect(
-                port,
-                hostDomain,
-                () => {
-                    proxySocket.write(bodyhead);
-                    socket.write("HTTP/" + req.httpVersion + " 200 Connection established\r\n\r\n");
-                }
-            );
-
-            proxySocket.on("data", (chunk: any) => {
-                socket.write(chunk);
-            });
-
-            proxySocket.on("end", () => {
-                socket.end();
-            });
-
-            proxySocket.on("error", () => {
-                socket.write("HTTP/" + req.httpVersion + " 500 Connection error\r\n\r\n");
-                socket.end();
-            });
-
-            socket.on("data", (chunk: any) => {
-                proxySocket.write(chunk);
-            });
-
-            socket.on("end", () => {
-                proxySocket.end();
-            });
-
-            socket.on("error", () => {
-                proxySocket.end();
-            });
-        }
-    });
+    }
 }

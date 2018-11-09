@@ -11,12 +11,20 @@ import { Dispatch } from "redux";
 import * as proxyActions from "../proxy/proxy.actions";
 import * as proxyConstants from "../proxy/proxy.constants";
 
-export function ReadMonsterSkill(rootResourcePath: string): constants.IReadMonsterSkillSuccess {
+export function ReadMonsterSkill(
+    rootResourcePath: string,
+    localResourcePath: string
+): constants.IReadMonsterSkillSuccess {
     const resultMonsterSkills: types.IMonsterSkill[] = [];
     let tempJsonContent;
 
     try {
-        const tempFileContent = fs.readFileSync(rootResourcePath + constants.MONSTER_SKILL_PATH);
+        const tempFileContent = fs.readFileSync(
+            rootResourcePath +
+                constants.RESOURCE_PATH +
+                localResourcePath +
+                constants.MONSTER_SKILL_PATH
+        );
         tempJsonContent = JSON.parse(tempFileContent);
     } catch (e) {
         console.log(e);
@@ -40,12 +48,20 @@ export function ReadMonsterSkill(rootResourcePath: string): constants.IReadMonst
     };
 }
 
-export function ReadMonsterData(rootResourcePath: string): constants.IReadMonsterDataSuccess {
+export function ReadMonsterData(
+    rootResourcePath: string,
+    localResourcePath: string
+): constants.IReadMonsterDataSuccess {
     const resultMonsterData = [];
     let tempJsonContent;
 
     try {
-        const tempFileContent = fs.readFileSync(rootResourcePath + constants.MONSTER_DATA_PATH);
+        const tempFileContent = fs.readFileSync(
+            rootResourcePath +
+                constants.RESOURCE_PATH +
+                localResourcePath +
+                constants.MONSTER_DATA_PATH
+        );
         tempJsonContent = JSON.parse(tempFileContent);
     } catch (e) {
         console.log(e);
@@ -70,12 +86,21 @@ export function ReadMonsterData(rootResourcePath: string): constants.IReadMonste
     };
 }
 
-export function ReadMonsterRoute(rootResourcePath: string): constants.IReadEvolutionRouteSuccess {
+export function ReadMonsterRoute(
+    rootResourcePath: string,
+    localResourcePath: string
+): constants.IReadEvolutionRouteSuccess {
     const resultEvolutionRouteData = [];
     let tempJsonContent;
 
     try {
-        const tempFileContent = fs.readFileSync(rootResourcePath + constants.MONSTER_ROUTE_PATH);
+        const tempFileContent = fs.readFileSync(
+            rootResourcePath +
+                constants.RESOURCE_PATH +
+                localResourcePath +
+                constants.MONSTER_ROUTE_PATH
+        );
+        
         tempJsonContent = JSON.parse(tempFileContent);
     } catch {
         // return
@@ -102,12 +127,20 @@ export function ReadMonsterRoute(rootResourcePath: string): constants.IReadEvolu
     };
 }
 
-export function ReadMonsterInfo(rootResourcePath: string): constants.IReadMonsterInfoSuccess {
+export function ReadMonsterInfo(
+    rootResourcePath: string,
+    localResourcePath: string
+): constants.IReadMonsterInfoSuccess {
     const resultMonsterInfo = [];
     let tempJsonContent;
 
     try {
-        const tempFileContent = fs.readFileSync(rootResourcePath + constants.MONSTER_INFO_PATH);
+        const tempFileContent = fs.readFileSync(
+            rootResourcePath +
+                constants.RESOURCE_PATH +
+                localResourcePath +
+                constants.MONSTER_INFO_PATH
+        );
         tempJsonContent = JSON.parse(tempFileContent);
     } catch {
         // return
