@@ -1,13 +1,6 @@
 /* tslint:disable no-console no-string-literal no-shadowed-variable*/
-const http = window.require("http");
-const net = window.require("net");
-const httpProxy = window.require("http-proxy");
-const url = window.require("url");
 
-/* HTTPS Support */
 const AnyProxy = window.require("anyproxy");
-const https = window.require("https");
-const fs = window.require("fs");
 
 import { Dispatch } from "redux";
 
@@ -150,10 +143,14 @@ export function StartProxyHTTPSServer(
                     } else {
                         console.log("Passthrough Response:");
                         console.log(tempJsonContent);
+                        dispatch(onGetMessage(requestDetail.url));
                     }
                 } catch {
                     console.log("JSON Parsing error");
                 }
+            }else
+            {
+                dispatch(onGetMessage(requestDetail.url));
             }
         },
         *onError(requestDetail: any, error: any): any {

@@ -54,6 +54,7 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
             userId: ""
         },
         rootResourcePath: "",
+        selectedLocale: "", 
         userMonsterList: []
     };
 
@@ -114,16 +115,7 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
                 continue;
             }
 
-            ipAddresses.push(
-                <p>
-                    {tempIpAddress.address}
-                    :2113
-                </p>
-            );
-        }
-
-        if (ipAddresses.length === 0) {
-            ipAddresses.push(<p>Cannot load IP Address, please check manually.</p>);
+            ipAddresses.push(tempIpAddress.address);
         }
 
         this.setState({
@@ -132,13 +124,13 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
     }
 
     public handleCaptureHTTPUserInfo() {
-        this.setState({ isLoading: true });
+        this.setState({ isLoading: true, selectedLocale: parserConstants.EN_RESOURCE_PATH });
         this.loadResources(parserConstants.EN_RESOURCE_PATH);
         this.props.OnCaptureHTTPSUserInfo(parserConstants.EN_RESOURCE_PATH);
     }
 
     public handleCaptureHTTPSUserInfo() {
-        this.setState({ isLoading: true });
+        this.setState({ isLoading: true, selectedLocale:parserConstants.JP_RESOURCE_PATH  });
         this.loadResources(parserConstants.JP_RESOURCE_PATH);
         this.props.OnCaptureHTTPSUserInfo(parserConstants.JP_RESOURCE_PATH);
     }
@@ -235,12 +227,30 @@ export class Home extends React.Component<types.IHomeProps, types.IHomeState> {
                 <Dimmer.Dimmable dimmed={this.state.isLoading}>
                     <Dimmer inverted active={this.state.isLoading}>
                         <Loader>
-                            <p>Proxy server is now running on:</p>
-                            {this.state.networkAddresses}
+                            <p>
+                                <p>Proxy server is now running on:</p> 
+                                {
+                                    this.state.networkAddresses.length > 0 ?
+                                    <p>{this.state.networkAddresses[0].toString().trim()}:2113</p> :
+                                    <p>Cannot load IP Address, please check manually and use port 2113</p>
+                                }
+                            </p>
                             {this.state.message !== "" ? (
                                 <p>Received Packets from: {this.state.message}</p>
                             ) : (
                                 ""
+                            )}
+                            {this.state.selectedLocale === parserConstants.JP_RESOURCE_PATH ? (
+                                <p> 
+                                    <p> Download HTTPS Certificate:</p>
+                                    {this.state.networkAddresses.length > 0 ?
+                                    <p>http://{this.state.networkAddresses[0].toString().trim()}:2114/fetchCrtFile</p> :(
+                                    <p> 
+                                    <p>Cannot load IP Address, please check manually and use port 2114.</p>
+                                    <p>e.g. http://192.168.0.165:2114/fetchCrtFile </p>  </p> )  }
+                                </p>
+                            ) : (
+                                undefined
                             )}
                         </Loader>
                     </Dimmer>

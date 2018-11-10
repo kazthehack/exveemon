@@ -32,6 +32,7 @@ export interface IHomeState {
     monsterSkills: types.IMonsterSkill[];
     networkAddresses: object[];
     rootResourcePath: string;
+    selectedLocale: string;
     playerInfo: types.IPlayerInfo;
     userMonsterList: types.IMonster[];
 }
