@@ -84,14 +84,16 @@ export class DeckView extends React.Component<types.IDeckProps, types.IDeckState
                 <HeaderContainer {...this.props} isDeck={true} />
                 <Divider />
                 <Grid centered>
-                    <Grid.Column width={14} id="pageGrid">
+                    <Grid.Column width={14}>
                         <Scrollbar
                             ref={ref => {
                                 this.htmlContentScrollRef = ref;
                             }}
                             className="gridScroll"
                         >
-                            {this.state.deckPageContent}
+                            <div id="pageGrid"> 
+                                {this.state.deckPageContent}
+                            </div>
                         </Scrollbar>
                     </Grid.Column>
                 </Grid>

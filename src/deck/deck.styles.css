@@ -1,11 +1,12 @@
 #deckList {
     padding: 10px;
-    padding-top: 0px;
 }
 
 #pageGrid {
     padding-top: 0px;
+    margin-right : 15px;
 }
+
 
 #cardContent {
     color: black;

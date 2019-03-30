@@ -95,7 +95,7 @@ export class GridView extends React.Component<types.IGridProps, types.IGridState
                 <HeaderContainer {...this.props} />
                 <Divider inverted />
                 <Grid centered>
-                    <Grid.Column width={16} id="pageGrid">
+                    <Grid.Column width={16}>
                         <Scrollbar
                             ref={ref => {
                                 this.htmlContentScrollRef = ref;

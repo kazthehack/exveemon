@@ -1,6 +1,11 @@
 {
     "changeLog": [
         {
+            "header": "1.2.0 Update",
+            "content": "- Combined resources from 1.1.1 to 1.1.3 \n - Fixed scrollbars and paddings of screens",
+            "version": "1.2.0"
+        },
+        {
             "header": "1.1.0 Update",
             "content": "- Added Support for JP Linkz \n - Modified proxy library from http-porxy to AnyProxy \n - Modified brotli and anyptoxy for electron compatibility \n - Fixed Preloading issue of CDNs for EN \n- Updated monster database for EN and JP \n ",
             "version": "1.1.0"
